@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
+  <defs>
+    <!-- Studio Blur / Bokeh Background -->
+    <linearGradient id="garageBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080d14"/>
+      <stop offset="50%" stop-color="#111a28"/>
+      <stop offset="100%" stop-color="#182333"/>
+    </linearGradient>
+
+    <!-- Carbon Fiber Pattern -->
+    <pattern id="carbonPattern" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#040810"/>
+      <polygon points="0,0 5,0 0,5" fill="#0c1524" opacity="0.8"/>
+      <polygon points="5,0 10,0 10,5 5,5" fill="#142136" opacity="0.8"/>
+      <polygon points="5,5 10,5 5,10" fill="#09111c" opacity="0.8"/>
+      <polygon points="0,5 5,5 0,10" fill="#182840" opacity="0.8"/>
+    </pattern>
+
+    <!-- Lower Carbon Table Weave -->
+    <pattern id="tableCarbon" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#111"/>
+      <rect x="0" y="0" width="4" height="4" fill="#222"/>
+      <rect x="4" y="4" width="4" height="4" fill="#1a1a1a"/>
+    </pattern>
+
+    <!-- Metallic Table Top Gradient -->
+    <linearGradient id="metalSurface" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="25%" stop-color="#94a3b8"/>
+      <stop offset="50%" stop-color="#e2e8f0"/>
+      <stop offset="75%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+
+    <!-- Silver Metallic Text & Logo Gradient -->
+    <linearGradient id="silverGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#f1f5f9"/>
+      <stop offset="70%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+
+    <!-- Blue Glow Gradient for V Emblem -->
+    <linearGradient id="blueVGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="boxShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="-10" dy="25" stdDeviation="20" flood-color="#000000" flood-opacity="0.9"/>
+    </filter>
+
+    <!-- Hexagon Overlay Pattern -->
+    <pattern id="hexOverlay" width="20" height="34.64" patternUnits="userSpaceOnUse">
+      <path d="M10 0 L20 5.77 L20 17.32 L10 23.09 L0 17.32 L0 5.77 Z" fill="none" stroke="#00a2ff" stroke-width="0.6" opacity="0.2"/>
+      <path d="M0 34.64 L10 28.87 L20 34.64" fill="none" stroke="#00a2ff" stroke-width="0.6" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- 1. Background Garage -->
+  <rect width="1000" height="600" fill="url(#garageBg)"/>
+  <circle cx="200" cy="120" r="150" fill="#38bdf8" opacity="0.04" filter="blur(50px)"/>
+  <circle cx="800" cy="150" r="180" fill="#ffffff" opacity="0.05" filter="blur(60px)"/>
+
+  <!-- 2. Metallic Workbench Surface -->
+  <polygon points="0,380 1000,380 1000,480 0,480" fill="url(#metalSurface)"/>
+  <line x1="0" y1="380" x2="1000" y2="380" stroke="#f1f5f9" stroke-width="3" opacity="0.8"/>
+  <line x1="0" y1="383" x2="1000" y2="383" stroke="#0284c7" stroke-width="1" opacity="0.5"/>
+
+  <!-- Lower Table Carbon Fiber Rim -->
+  <polygon points="0,480 1000,480 1000,600 0,600" fill="url(#tableCarbon)"/>
+  <line x1="0" y1="480" x2="1000" y2="480" stroke="#475569" stroke-width="2"/>
+
+  <!-- 3. Table Reflections -->
+  <g transform="translate(0, 780) scale(1, -1)" opacity="0.18" filter="blur(6px)">
+    <polygon points="320,380 840,380 840,100 320,100" fill="#0284c7"/>
+  </g>
+
+  <!-- 4. Glass Bottle (Right side background) -->
+  <g transform="translate(810, 190)" filter="url(#boxShadow)">
+    <ellipse cx="25" cy="225" rx="22" ry="7" fill="#000000" opacity="0.8"/>
+    <rect x="5" y="70" width="40" height="150" rx="6" fill="#0b1320" stroke="#475569" stroke-width="1.5"/>
+    <rect x="9" y="75" width="8" height="140" fill="#38bdf8" opacity="0.4" filter="blur(1px)"/>
+    <rect x="5" y="100" width="40" height="90" fill="#040914" stroke="#0284c7" stroke-width="0.5"/>
+    <path d="M25,110 L33,118 L33,130 L25,138 L17,130 L17,118 Z" fill="none" stroke="#38bdf8" stroke-width="1"/>
+    <text x="25" y="152" fill="#ffffff" font-family="sans-serif" font-size="5" font-weight="bold" text-anchor="middle">Diamond</text>
+    <text x="25" y="162" fill="#38bdf8" font-family="sans-serif" font-size="5" font-weight="bold" text-anchor="middle">Shield 12H</text>
+    <text x="25" y="172" fill="#94a3b8" font-family="sans-serif" font-size="4" text-anchor="middle">30ml 1.01 fl.oz</text>
+    <rect x="14" y="40" width="22" height="30" fill="#1e293b" rx="2"/>
+    <rect x="17" y="15" width="16" height="25" fill="#0f172a" rx="1"/>
+    <path d="M 17,15 Q 25,2 33,15 Z" fill="#000000"/>
+  </g>
+
+  <!-- 5. MAIN 3D PRODUCT BOX -->
+  <g filter="url(#boxShadow)">
+    
+    <!-- A. TOP FACE OF BOX -->
+    <polygon points="320,130 840,130 890,75 370,75" fill="#0d1829" stroke="#1d2d44" stroke-width="1"/>
+    <polygon points="320,130 840,130 890,75 370,75" fill="url(#carbonPattern)" opacity="0.7"/>
+    <polygon points="320,130 840,130 890,75 370,75" fill="url(#hexOverlay)" opacity="0.5"/>
+    <line x1="320" y1="130" x2="840" y2="130" stroke="#38bdf8" stroke-width="2" opacity="0.9"/>
+
+    <!-- B. LEFT SIDE FACE OF BOX -->
+    <polygon points="220,175 320,130 320,440 220,485" fill="#060c17" stroke="#132033" stroke-width="1"/>
+    <polygon points="220,175 320,130 320,440 220,485" fill="url(#carbonPattern)" opacity="0.8"/>
+    
+    <!-- Left Side Panel Text -->
+    <g transform="translate(230, 170) skewY(-24) scale(0.85, 1.0)">
+      <text x="5" y="20" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="900" letter-spacing="1">7 ADVANCED</text>
+      <text x="5" y="34" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="900" letter-spacing="1">FEATURES</text>
+      
+      <g fill="#e2e8f0" font-family="sans-serif" font-size="8" font-weight="600">
+        <text x="5" y="55">🛡️ 12H Hardness Protection</text>
+        <text x="5" y="73">💧 Hydrophobic Water Beading</text>
+        <text x="5" y="91">☀️ UV &amp; Oxidation Resistance</text>
+        <text x="5" y="109">🧪 Chemical &amp; Acid Resistance</text>
+        <text x="5" y="127">✨ High Gloss Mirror Finish</text>
+        <text x="5" y="145">💎 Anti-Scratch Protection</text>
+        <text x="5" y="163">⏳ Durability Up to 7 Years</text>
+      </g>
+
+      <text x="5" y="215" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">30 ML 1.01 FL. OZ.</text>
+    </g>
+
+    <!-- C. FRONT FACE OF BOX -->
+    <polygon points="320,130 840,130 840,440 320,440" fill="url(#carbonPattern)"/>
+    <polygon points="320,130 840,130 840,440 320,440" fill="url(#hexOverlay)" opacity="0.6"/>
+
+    <!-- Front Face Glow Lines -->
+    <rect x="320" y="130" width="520" height="310" fill="none" stroke="#0088ff" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="580" cy="210" r="100" fill="#0284c7" opacity="0.25" filter="blur(30px)"/>
+
+    <!-- D. LOGO SHIELD EMBLEM -->
+    <g transform="translate(580, 205)">
+      <path d="M0 -60 C40 -60, 68 -42, 68 5 C68 50, 35 82, 0 100 C-35 82, -68 50, -68 5 C-68 -42, -40 -60, 0 -60 Z" 
+            fill="#030a14" stroke="url(#silverGradient)" stroke-width="6" filter="url(#boxShadow)"/>
+      
+      <!-- Molecular Hexagon Matrix -->
+      <g stroke="#38bdf8" stroke-width="2" fill="#0369a1">
+        <polygon points="0,-32 16,-22 16,-3 0,7 -16,-3 -16,-22" />
+        <circle cx="0" cy="-32" r="4" fill="#ffffff"/>
+        <circle cx="16" cy="-22" r="4" fill="#ffffff"/>
+        <circle cx="16" cy="-3" r="4" fill="#ffffff"/>
+        <circle cx="0" cy="7" r="4" fill="#ffffff"/>
+        <circle cx="-16" cy="-3" r="4" fill="#ffffff"/>
+        <circle cx="-16" cy="-22" r="4" fill="#ffffff"/>
+      </g>
+
+      <!-- V Wing -->
+      <path d="M-50 -20 L0 68 L50 -20 L30 -20 L0 25 L-30 -20 Z" fill="url(#blueVGrad)" filter="url(#softGlow)"/>
+    </g>
+
+    <!-- E. TYPOGRAPHY (PHOTO 3 EXACT TEXT) -->
+    <!-- Diamond -->
+    <text x="580" y="295" fill="url(#silverGradient)" font-family="sans-serif" font-size="44" font-weight="900" letter-spacing="3" text-anchor="middle" filter="url(#softGlow)">Diamond</text>
+
+    <!-- Shield 12H -->
+    <text x="580" y="342" fill="url(#silverGradient)" font-family="sans-serif" font-size="42" font-weight="900" letter-spacing="3" text-anchor="middle" filter="url(#softGlow)">Shield 12H</text>
+
+    <!-- CERAMIC COATING -->
+    <text x="580" y="378" fill="#38bdf8" font-family="sans-serif" font-size="20" font-weight="800" letter-spacing="3" text-anchor="middle">CERAMIC COATING</text>
+
+    <!-- Horizontal Cyan Lines -->
+    <line x1="380" y1="371" x2="435" y2="371" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="725" y1="371" x2="780" y2="371" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Premium Nano-Matrix Formula -->
+    <text x="580" y="412" fill="#f1f5f9" font-family="sans-serif" font-size="16" font-weight="600" text-anchor="middle">Premium Nano-Matrix Formula</text>
+
+  </g>
+</svg>

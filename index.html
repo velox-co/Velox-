@@ -1,0 +1,1148 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELOX - Protection Beyond Compare</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- استيراد الخطوط -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- الواجهة العلوية المتكاملة مع اللوجو -->
+    <header class="header-container">
+        <div class="navbar-wrapper">
+            <!-- الروابط اليسرى -->
+            <nav class="nav-group nav-left">
+                <a href="#products" class="nav-item active" onclick="navigateToSection(event, 'products')">Products</a>
+                <a href="#technology" class="nav-item" onclick="navigateToSection(event, 'technology')">Technology</a>
+            </nav>
+
+            <!-- الشعار الأوسط المدمج -->
+            <div class="brand-center" onclick="navigateToSection(event, 'products')" style="cursor: pointer;">
+                <div class="logo-wrapper">
+                    <img src="images/logo.eps" onerror="if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/logo.svg';}else if(!this.dataset.triedPng){this.dataset.triedPng='1'; this.src='images/logo.png';}else if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/logo.jpg';}else{this.style.display='none';}" alt="VELOX Logo" class="brand-logo-img">
+                </div>
+            </div>
+
+            <!-- الروابط اليمنى -->
+            <nav class="nav-group nav-right">
+                <a href="#about" class="nav-item" onclick="navigateToSection(event, 'about')">About</a>
+                <a href="#contact" class="nav-item" onclick="navigateToSection(event, 'contact')">Contact</a>
+            </nav>
+        </div>
+
+        <!-- الخط الفاصل المضاء خلف اللوجو -->
+        <div class="divider-line"></div>
+
+        <!-- العنوان الرئيسي -->
+        <div class="hero-title-container">
+            <h1 class="main-title">PROTECTION BEYOND COMPARE</h1>
+        </div>
+    </header>
+
+    <!-- حاوية المنتجات الرئيسية -->
+    <main id="products" class="products-container">
+        
+        <!-- المنتج الأول -->
+        <section class="product-card dark-bg">
+            <div class="product-image">
+                <img src="images/product1.png" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/product1.jpg';}else if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/product1.svg';}else{this.onerror=null; this.style.display='none';}" alt="VELOX Graphene Ceramic Coating Box">
+            </div>
+            <div class="product-info">
+                <span class="product-badge">NOUVEAU</span>
+                <h2>REVÊTEMENT DE QUALITÉ PROFESSIONNELLE</h2>
+                <ul>
+                    <li>Dureté 10H</li>
+                    <li>Protection 3-5 ans</li>
+                    <li>Nanotechnologie Avancée</li>
+                    <li>Effet brillance spectaculaire</li>
+                    <li>Céramique adaptable</li>
+                </ul>
+                <div class="card-action-group">
+                    <button class="btn btn-buy" onclick="openOrderModal('product1')">🛒 ACHETER ($59)</button>
+                    <button class="btn btn-light" onclick="openProductModal('product1')">PLUS D'INFORMATIONS</button>
+                </div>
+            </div>
+            <div class="product-specs">
+                <div class="card-price-tag">$59.00</div>
+                <table class="specs-table">
+                    <tr><td>Qualité</td><td>A++</td></tr>
+                    <tr><td>Capacité</td><td>30ml</td></tr>
+                    <tr><td>Ingrédient Principal</td><td>Grapheneceramic</td></tr>
+                    <tr><td>Bénéfices</td><td>Protection globale</td></tr>
+                </table>
+                <div class="badges">
+                    <div class="badge"><span class="angle">120°</span> Angle de contact</div>
+                    <div class="badge"><span class="count">500+</span> Lavages testés</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- المنتج الثاني -->
+        <section class="product-card light-bg">
+            <div class="product-image">
+                <img src="images/product2.png" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/product2.jpg';}else if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/product2.svg';}else{this.onerror=null; this.style.display='none';}" alt="Graphene Ultra 10H Bottle">
+            </div>
+            <div class="product-info dark-text">
+                <span class="product-badge badge-dark">PREMIUM</span>
+                <h2 class="blue-title">GRAPHENE ULTRA 10H</h2>
+                <ul>
+                    <li>DURÉE DE VIE DE 5 ANS+</li>
+                    <li>EFFET SUPER HYDROPHOBE UNIQUE</li>
+                    <li>DURÉE DE VIE DE 5 ANS+</li>
+                    <li>EFFET BLINDAGE DE CURE</li>
+                    <li>PROTECTION EXTÉRIEURE</li>
+                </ul>
+                <div class="card-action-group">
+                    <button class="btn btn-buy" onclick="openOrderModal('product2')">🛒 ACHETER ($89)</button>
+                    <button class="btn btn-dark" onclick="openProductModal('product2')">PLUS D'INFORMATIONS</button>
+                </div>
+            </div>
+            <div class="product-specs dark-specs">
+                <div class="card-price-tag">$89.00</div>
+                <table class="specs-table">
+                    <tr><td>Qualité</td><td>A+++</td></tr>
+                    <tr><td>Capacité</td><td>30ml</td></tr>
+                    <tr><td>Ingrédient Principal</td><td>Grapheneceramic</td></tr>
+                    <tr><td>Bénéfices</td><td>Ultra Protection</td></tr>
+                </table>
+                <div class="badges">
+                    <div class="badge"><span class="angle">125°</span> Angle de contact</div>
+                    <div class="badge"><span class="count">1000+</span> Lavages testés</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- المنتج الثالث -->
+        <section class="product-card dark-bg">
+            <div class="product-image">
+                <img src="images/product3.png" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/product3.jpg';}else if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/product3.svg';}else{this.onerror=null; this.style.display='none';}" alt="Diamond Shield 12H Banner">
+            </div>
+            <div class="product-info">
+                <span class="product-badge">EXTRÊME</span>
+                <h2>DIAMOND SHIELD 12H</h2>
+                <h3 class="sub-blue">LA RÉFÉRENCE ABSOLUE POUR PEINTURES ET VINYLES</h3>
+                <ul>
+                    <li>DURETÉ 12H RÉVOLUTIONNAIRE</li>
+                    <li>PROTECTION EXTRÊME DE 7 ANS</li>
+                    <li>POUR FILM ET VINYLES</li>
+                    <li>EFFET SUPER HYDROPHOBIQUE</li>
+                </ul>
+                <div class="card-action-group">
+                    <button class="btn btn-buy" onclick="openOrderModal('product3')">🛒 ACHETER ($119)</button>
+                    <button class="btn btn-light" onclick="openProductModal('product3')">PLUS D'INFORMATIONS</button>
+                </div>
+            </div>
+            <div class="product-specs">
+                <div class="card-price-tag">$119.00</div>
+                <table class="specs-table">
+                    <tr><td>Qualité</td><td>A+++++</td></tr>
+                    <tr><td>Capacité</td><td>30ml</td></tr>
+                    <tr><td>Protection</td><td>7 ans</td></tr>
+                    <tr><td>Bénéfices</td><td>Protection Vinyle</td></tr>
+                </table>
+                <div class="badges">
+                    <div class="badge"><span class="angle">137°</span> Angle de contact</div>
+                    <div class="badge"><span class="count">🛡️</span> POUR FILMS VINYLES</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- قسم التكنولوجيا (Technology Section) -->
+    <section id="technology" class="page-section technology-section">
+        <div class="section-container">
+            <div class="section-header-badge">
+                <span class="sub-badge">NANOTECHNOLOGIE VELOX</span>
+                <h2 class="section-main-title">NOTRE TECHNOLOGIE D'AVANT-GARDE</h2>
+                <p class="section-desc">L'alliance de la nanotechnologie au graphène et des réseaux moléculaires de silice pour une matrice auto-cicatrisante et ultra-durable.</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">🔬</div>
+                    <h3>MATRICE GRAPHÈNE 3D</h3>
+                    <p>Structure hexagonale à l'échelle atomique qui offre une flexibilité moléculaire exceptionnelle et une liaison chimique permanente avec le vernis d'origine.</p>
+                    <span class="tech-tag">Dureté 10H - 12H Pencil</span>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">💧</div>
+                    <h3>PERLAGE HYDROPHOBE 137°</h3>
+                    <p>Angle de contact d'eau record repoussant instantanément la pluie, la boue, les fientes et les résidus routiers pour un effet auto-nettoyant permanent.</p>
+                    <span class="tech-tag">Effet Bionique Lotus</span>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">🔥</div>
+                    <h3>DISSIPATION THERMIQUE 760°C</h3>
+                    <p>Réduit la température de surface au soleil et empêche la fixation des taches d'eau alcalines dues à l'évaporation rapide.</p>
+                    <span class="tech-tag">Protection Anti-UV & Chaleur</span>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon-wrapper">🛡️</div>
+                    <h3>COMPATIBILITÉ MULTI-SURFACES</h3>
+                    <p>Formulé pour adhérer sans altération sur peinture brillante, vernis satiné/mat, et films protecteurs PPF ou coverings vinyles.</p>
+                    <span class="tech-tag">Gloss, Matte & Vinyl</span>
+                </div>
+            </div>
+
+            <!-- قسم التطبيقات المدمج -->
+            <div class="apps-grid-wrapper">
+                <h3 class="apps-subtitle">SURFACES D'APPLICATION COMPATIBLES</h3>
+                <div class="apps-grid">
+                    <div class="app-item">
+                        <img src="images/gloss.png" alt="Gloss Surface">
+                        <div class="app-title">GLOSS</div>
+                    </div>
+                    <div class="app-item">
+                        <img src="images/matte.png" alt="Matte Surface">
+                        <div class="app-title">MATTE</div>
+                    </div>
+                    <div class="app-item">
+                        <img src="images/vinyl.png" alt="Vinyl Wrap">
+                        <div class="app-title">VINYL</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم عن الشركة (About Section) -->
+    <section id="about" class="page-section about-section">
+        <div class="section-container">
+            <div class="about-flex">
+                <div class="about-content">
+                    <span class="sub-badge">À PROPOS DE VELOX</span>
+                    <h2 class="section-main-title">L'EXCELLENCE DE LA PROTECTION AUTOMOBILE</h2>
+                    <p class="about-text">
+                        VELOX est un pionnier mondial dans l'élaboration de revêtements céramiques et nanométriques de très haute pureté. Nos ingénieurs et chercheurs conçoivent des formules de protection de carrosserie élaborées pour résister aux climats les plus rigoureux.
+                    </p>
+                    <p class="about-text">
+                        Chaque flacon VELOX subit un protocole strict de validation en laboratoire sous certification <strong>ISO9001</strong> et répond aux normes de sécurité internationales <strong>MSDS</strong>. Que ce soit pour des supercars, des véhicules de collection ou des coverings quotidiens, VELOX garantit une finition miroir inaltérable.
+                    </p>
+
+                    <div class="about-stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Années de R&D</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Véhicules Traités</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label">Pays Distribués</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">ISO</span>
+                            <span class="stat-label">Certifié 9001/MSDS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل (Contact Section) -->
+    <section id="contact" class="page-section contact-section">
+        <div class="section-container">
+            <div class="section-header-badge">
+                <span class="sub-badge">CONTACTEZ NOS EXPERTS</span>
+                <h2 class="section-main-title">DEMANDE DE DEVIS & INFORMATION</h2>
+                <p class="section-desc">Vous êtes detailer professionnel, distributeur ou particulier passionné ? Écrivez-nous pour toute question ou commande sur-mesure.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Info Box -->
+                <div class="contact-info-card">
+                    <h3>INFORMATIONS DE CONTACT</h3>
+                    <div class="c-info-item">
+                        <span class="c-icon">✉️</span>
+                        <div>
+                            <strong>Email Officiel</strong>
+                            <p><a href="mailto:contact@veloxcoating.com">contact@veloxcoating.com</a></p>
+                        </div>
+                    </div>
+                    <div class="c-info-item">
+                        <span class="c-icon">🌐</span>
+                        <div>
+                            <strong>Site Web Officiel</strong>
+                            <p><a href="https://www.veloxcoating.com" target="_blank">www.veloxcoating.com</a></p>
+                        </div>
+                    </div>
+                    <div class="c-info-item">
+                        <span class="c-icon">⏱️</span>
+                        <div>
+                            <strong>Horaires du Support</strong>
+                            <p>Du Lundi au Vendredi (8h00 - 18h00 UTC)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="c-name">Nom Complet *</label>
+                            <input type="text" id="c-name" required placeholder="Ex: Jean Dupont">
+                        </div>
+                        <div class="form-group">
+                            <label for="c-email">Adresse Email *</label>
+                            <input type="email" id="c-email" required placeholder="nom@exemple.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="c-subject">Sujet de la demande</label>
+                        <select id="c-subject">
+                            <option value="devis">Commande / Demande de devis</option>
+                            <option value="product1">Graphene Ceramic 10H (A++)</option>
+                            <option value="product2">Graphene Ultra 10H (A+++)</option>
+                            <option value="product3">Diamond Shield 12H (A+++++)</option>
+                            <option value="pro">Devenir Centre Applicateur Agréé VELOX</option>
+                            <option value="autre">Autre question technique</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="c-message">Votre Message *</label>
+                        <textarea id="c-message" rows="4" required placeholder="Précisez votre véhicule, votre surface ou vos besoins..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-contact-submit">ENVOYER LE MESSAGE</button>
+                    <div id="contactFeedback" class="contact-feedback"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- النافذة المنبثقة للتفاصيل الإضافية (Modal) -->
+    <div id="productModal" class="modal-overlay" aria-hidden="true" onclick="handleOverlayClick(event)">
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeProductModal()" aria-label="Fermer">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamically filled by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة إتمام الطلب الشراء (Order Checkout Modal) -->
+    <div id="orderModal" class="modal-overlay" aria-hidden="true" onclick="handleOrderOverlayClick(event)">
+        <div class="modal-container order-modal-container">
+            <button class="modal-close" onclick="closeOrderModal()" aria-label="Fermer">&times;</button>
+            <div class="modal-body" id="orderModalBody">
+                <!-- Dynamically filled by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة وصل الشراء والتأكيد (Order Receipt Modal) -->
+    <div id="orderReceiptModal" class="modal-overlay" aria-hidden="true" onclick="handleReceiptOverlayClick(event)">
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeReceiptModal()" aria-label="Fermer">&times;</button>
+            <div class="modal-body" id="receiptModalBody">
+                <!-- Dynamically filled by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم شعار الدفع الآمن (Secure Payment Badge Section) -->
+    <section class="secure-payment-section">
+        <div class="secure-payment-container">
+            <div class="secure-header">
+                <div class="secure-icon-main">🔒</div>
+                <div class="secure-text-group">
+                    <h3 class="secure-title">PAIEMENT 100% SÉCURISÉ &amp; GARANTI</h3>
+                    <p class="secure-subtitle">Transactions protégeés par cryptage SSL 256-bit — Protection officielle des acheteurs PayPal</p>
+                </div>
+            </div>
+            
+            <div class="secure-badges-grid">
+                <div class="secure-badge-item">
+                    <span class="badge-icon">🅿️</span>
+                    <span class="badge-label">PayPal Partenaire Officiel</span>
+                </div>
+                <div class="secure-badge-item">
+                    <span class="badge-icon">🛡️</span>
+                    <span class="badge-label">Cryptage SSL 256-Bit</span>
+                </div>
+                <div class="secure-badge-item">
+                    <span class="badge-icon">💳</span>
+                    <span class="badge-label">CB / Visa / Mastercard</span>
+                </div>
+                <div class="secure-badge-item">
+                    <span class="badge-icon">⚡</span>
+                    <span class="badge-label">Expédition Express 24/48h</span>
+                </div>
+                <div class="secure-badge-item">
+                    <span class="badge-icon">✅</span>
+                    <span class="badge-label">Garantie ISO9001 / MSDS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر المحدث -->
+    <footer class="main-footer">
+        <div class="footer-brand">
+            <img src="images/logo.eps" onerror="if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/logo.svg';}else if(!this.dataset.triedPng){this.dataset.triedPng='1'; this.src='images/logo.png';}else if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/logo.jpg';}else{this.style.display='none';}" alt="VELOX" class="footer-logo-img">
+            <span class="iso-badge">ISO</span> ISO9001/MSDS
+        </div>
+        <div class="footer-contact">
+            <a href="mailto:contact@veloxcoating.com">contact@veloxcoating.com</a>
+            <span class="footer-sep">|</span>
+            <a href="https://www.veloxcoating.com" target="_blank">www.veloxcoating.com</a>
+        </div>
+    </footer>
+
+    <script>
+        const productsData = {
+            product1: {
+                id: "product1",
+                price: 59,
+                paypalUrl: "https://www.paypal.com/ncp/payment/NQCDKQAW95DXW",
+                badge: "QUALITÉ A++ | 10H GRAPHÈNE",
+                title: "GRAPHÈNE CÉRAMIQUE 10H",
+                subtitle: "Graphène Céramique - Revêtement Graphène de Qualité Professionnelle",
+                image: "images/product1.png",
+                alt: "VELOX Graphene Ceramic Coating Box",
+                quality: "A++",
+                capacity: "30 ML",
+                certification: "ISO9001 / MSDS",
+                contactAngle: "120° (Test Réel)",
+                durability: "3 à 5 Ans (400-600 lavages)",
+                mainIngredient: "Nanotechnologie avancée de la céramique de graphène",
+                description: "Offrez à votre peinture des niveaux de protection et de brillance sans précédent ! Exploitant la puissance de la nanotechnologie avancée céramique au graphène, il crée une première couche de défense ultra durable qui aide à protéger votre peinture des menaces les plus extrêmes. Il scelle les imperfections microscopiques et les pores de la peinture de votre voiture pour créer une surface lisse et vitreuse qui repousse l'eau et les contaminants instantanément, prévenant les taches d'eau et minimisant l'entretien à long terme.",
+                highlights: [
+                    "Protection durable de 3 à 5 ans avec excellente répulsion de l'eau",
+                    "Nanotechnologie avancée du graphène céramique",
+                    "Meilleure résistance possible aux tourbillons et aux produits chimiques pour une qualité prosumer",
+                    "Offre une protection de la peinture avec des niveaux de brillance, durabilité et résistance aux rayures inégalés",
+                    "Forme un film combiné relativement épais par rapport aux revêtements céramiques classiques",
+                    "Considéré comme le revêtement céramique au vrai graphène le plus épais et le plus durable de l'industrie"
+                ],
+                specs: [
+                    { label: "Nom du produit", value: "Graphène céramique 10H" },
+                    { label: "Qualité", value: "A++" },
+                    { label: "Capacité", value: "30 ML" },
+                    { label: "Certification", value: "ISO9001 / MSDS" },
+                    { label: "Ingrédient principal", value: "Nanotechnologie avancée de la céramique de graphène" },
+                    { label: "Dureté", value: "Dureté 10H Pencil Hardness" },
+                    { label: "Durabilité", value: "Dernières 3 à 5 années (400 à 600 lavages)" },
+                    { label: "Angle de contact d'eau", value: "120° (test réel en laboratoire)" },
+                    { label: "Finition visuelle", value: "Finition extrêmement brillante (Miroir)" },
+                    { label: "Résistance chimique", value: "Résistance chimique avancée (pH 2 - pH 12)" },
+                    { label: "Protections", value: "Résistance à l'oxydation, corrosion, intempéries et UV" },
+                    { label: "Maintenance", value: "Auto-nettoyant, puissant rejet de la poussière et saletés" }
+                ],
+                boxContent: [
+                    "1x Flacon Graphène Céramique 10H 30ml",
+                    "1x Bloc applicateur ergonomique en mousse haute densité",
+                    "4x Chiffons suédines microfibres ultra-doux",
+                    "1x Paire de gants de protection en nitrile",
+                    "1x Manuel d'utilisation détaillé & Certificat d'authenticité"
+                ]
+            },
+            product2: {
+                id: "product2",
+                price: 89,
+                paypalUrl: "https://www.paypal.com/ncp/payment/2PMC3M4238GUQ",
+                badge: "QUALITÉ A+++ | ULTRA 10H",
+                title: "GRAPHÈNE ULTRA 10H",
+                subtitle: "Revêtement Céramique Graphene Ultra 10H - Protection 5+ Ans",
+                image: "images/product2.png",
+                alt: "Graphene Ultra 10H Bottle",
+                quality: "A+++",
+                capacity: "30 ML",
+                certification: "ISO9001 / MSDS",
+                contactAngle: "125° (Test Réel)",
+                durability: "5+ Ans (+1000 lavages)",
+                mainIngredient: "Polysiloxane & Particules Nano-Bioniques Condensées",
+                description: "Il s'agit de notre revêtement monocouche le plus récent, extrêmement hydrophobe et durable. Des particules nano-bioniques condensées, dotées de capacités de réticulation supérieures, offrent une structure 3D robuste ainsi qu'un revêtement flexible à haute brillance. Sa principale caractéristique est son super pouvoir hydrofuge et sa durée de vie de plus de 5 ans en lavage auto normal. Grâce à la structure en nid d'abeille du graphène, la combinaison de composés inorganiques est plus solide, démontrant un effet hydrophobe exceptionnel même après 1 000 lavages.",
+                highlights: [
+                    "Revêtement de verre à effet super hydrophobe - l'eau glisse instantanément",
+                    "Durée de vie certifiée de 5+ ans en lavage auto normal",
+                    "Donne un brillant luxueux et redonne à la voiture un aspect neuf permanent",
+                    "Dureté 10H supérieure protégeant votre carrosserie des rayures",
+                    "Haute transparence après cristallisation & résistance aux taches d'eau",
+                    "Propriétés ignifuges et résistance thermique jusqu'à 760°C"
+                ],
+                specs: [
+                    { label: "Nom du produit", value: "Graphène Ultra 10H" },
+                    { label: "Qualité", value: "A+++" },
+                    { label: "Capacité", value: "30 ML" },
+                    { label: "Certification", value: "ISO9001 / MSDS" },
+                    { label: "Matériau", value: "Polysiloxane et nano-composés bioniques" },
+                    { label: "Dureté", value: "Dureté 10H Matrix Ultra" },
+                    { label: "Durabilité", value: "Dernières 5+ années (plus de 1000 lavages)" },
+                    { label: "Angle de contact d'eau", value: "125° (test réel en laboratoire)" },
+                    { label: "Tolérance pH", value: "pH 1 - pH 12 (Haute tolérance chimique)" },
+                    { label: "Résistance à la chaleur", value: "Jusqu'à 760°C" },
+                    { label: "Propriétés spéciales", value: "Ignifuge, Anti-rayures, Anti-taches d'eau, Anti-corrosion" }
+                ],
+                boxContent: [
+                    "1x Flacon Premium Graphène Ultra 10H 30ml verre fumé anti-UV",
+                    "1x Applicateur Pro Dual-Layer à haute réticulation",
+                    "5x Lingettes suédines de précision",
+                    "1x Certificat d'authenticité avec contrôle ISO9001/MSDS"
+                ]
+            },
+            product3: {
+                id: "product3",
+                price: 119,
+                paypalUrl: "https://www.paypal.com/ncp/payment/T2L8N2WM2PVPE",
+                badge: "QUALITÉ A+++++ | DIAMOND 12H",
+                title: "DIAMOND SHIELD 12H",
+                subtitle: "Revêtement Céramique Diamond Shield 12H - Spécial Peintures, PPF & Vinyles",
+                image: "images/product3.png",
+                alt: "Diamond Shield 12H Banner",
+                quality: "A+++++",
+                capacity: "30 ML",
+                certification: "ISO9001 / MSDS",
+                contactAngle: "137° (Test Réel)",
+                durability: "5 à 7 Ans",
+                mainIngredient: "Formule Brevetée CARLAYER Diamond Nano-Hardness",
+                description: "Diamond Shield 12H se concentre sur la recherche et le développement de revêtements de très haute qualité. La série de revêtements céramiques CARLAYER est en cours de dépôt de brevet. Spécialement formulée pour les peintures brillantes, mates et les films vinyles (coverings) de toute texture, elle compense le manque d'imperméabilité et de brillance des films tout en offrant un éclat éternel et un nettoyage ultra facile.",
+                highlights: [
+                    "Formule professionnelle avancée spéciale pour films vinyles (PPF/Covering)",
+                    "Convient aux finitions de carrosseries brillantes et mates",
+                    "Durabilité exceptionnelle jusqu'à 5 à 7 ans",
+                    "Niveaux de brillance, de durabilité et d'anti-rayures jamais égalés",
+                    "Angle de contact révolutionnaire de 137° pour un écoulement d'eau instantané",
+                    "Haute transparence après cristallisation, anti-rayures, ignifuge et prévention des tourbillons"
+                ],
+                specs: [
+                    { label: "Nom du produit", value: "Revêtement céramique Diamond Shield" },
+                    { label: "Qualité", value: "A+++++" },
+                    { label: "Capacité", value: "30 ML" },
+                    { label: "Certification", value: "ISO9001 / MSDS" },
+                    { label: "Compatibilité", value: "Peinture brillante, Peinture mate & Films Vinyles/PPF" },
+                    { label: "Dureté", value: "Dureté 12H Diamond Nano-Hardness" },
+                    { label: "Durabilité", value: "5 à 7 années de protection" },
+                    { label: "Angle de contact d'eau", value: "137° (test réel le plus élevé)" },
+                    { label: "Résistance chimique", value: "pH 2 - pH 12" },
+                    { label: "Finition", value: "Haute brillance éternelle / respect des mats" },
+                    { label: "Caractéristiques", value: "Anti-rayures, Ignifuge, Prévention des tourbillons, Ultra hydrophobe" }
+                ],
+                boxContent: [
+                    "1x Flacon DIAMOND SHIELD 12H 30ml",
+                    "1x Solution de préparation de surface 50ml",
+                    "1x Bloc applicateur Pro Velvet haute densité",
+                    "6x Microfibres suédines de finition professionnelle",
+                    "1x Autocollant holographique officiel de certification"
+                ]
+            }
+        };
+
+        function openProductModal(productId) {
+            const data = productsData[productId];
+            if (!data) return;
+
+            const modalBody = document.getElementById('modalBody');
+            modalBody.innerHTML = `
+                <!-- Modal Tabs Header -->
+                <div class="modal-tabs-header">
+                    <button class="modal-tab-btn active" onclick="switchModalTab('info', this)">📋 FICHE PRODUIT</button>
+                    <button class="modal-tab-btn" onclick="switchModalTab('guide', this)">📘 GUIDE D'APPLICATION</button>
+                    <button class="modal-tab-btn" onclick="switchModalTab('faq', this)">❓ QUESTIONS (FAQ)</button>
+                    <button class="modal-tab-btn" onclick="switchModalTab('reviews', this)">⭐ AVIS EXPERTS</button>
+                </div>
+
+                <!-- TAB 1: Product Specific Info -->
+                <div id="tab-info" class="modal-tab-pane active" style="padding-top: 15px;">
+                    <div class="modal-grid">
+                        <div class="modal-image-col">
+                            <div class="modal-badge">${data.badge}</div>
+                            <img src="${data.image}" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/' + data.id + '.jpg';}else if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/' + data.id + '.svg';}else{this.onerror=null; this.style.display='none';}" alt="${data.alt}" class="modal-img">
+                            <div class="modal-quick-stats">
+                                <div class="m-stat">
+                                    <span class="m-stat-val">${data.quality}</span>
+                                    <span class="m-stat-lbl">Grade Qualité</span>
+                                </div>
+                                <div class="m-stat">
+                                    <span class="m-stat-val">${data.capacity}</span>
+                                    <span class="m-stat-lbl">Capacité</span>
+                                </div>
+                                <div class="m-stat">
+                                    <span class="m-stat-val">ISO/MSDS</span>
+                                    <span class="m-stat-lbl">Certification</span>
+                                </div>
+                            </div>
+                            <div class="modal-lab-highlight">
+                                <div class="lab-title">🧪 RESULTAT DE TEST RÉEL</div>
+                                <div class="lab-stat">Angle Hydrophobe: <strong>${data.contactAngle}</strong></div>
+                                <div class="lab-stat">Durabilité: <strong>${data.durability}</strong></div>
+                            </div>
+                        </div>
+
+                        <div class="modal-info-col">
+                            <h2 class="modal-title">${data.title}</h2>
+                            <h3 class="modal-subtitle">${data.subtitle}</h3>
+                            <p class="modal-desc">${data.description}</p>
+
+                            <div class="modal-section-title">☑️ POINTS FORTS & AVANTAGES EXCLUSIFS</div>
+                            <ul class="modal-features-list">
+                                ${data.highlights.map(f => `<li>${f}</li>`).join('')}
+                            </ul>
+
+                            <div class="modal-section-title">📊 FICHE TECHNIQUE COMPLÈTE</div>
+                            <table class="modal-specs-table">
+                                <tbody>
+                                    ${data.specs.map(s => `<tr><td>${s.label}</td><td><strong>${s.value}</strong></td></tr>`).join('')}
+                                </tbody>
+                            </table>
+
+                            <div class="modal-section-title">📦 CONTENU DU PACK</div>
+                            <ul class="modal-box-list">
+                                ${data.boxContent.map(item => `<li>${item}</li>`).join('')}
+                            </ul>
+
+                            <div class="modal-actions">
+                                <button class="btn btn-modal-primary" onclick="closeProductModal(); openOrderModal('${data.id}');">🛒 PASSER COMMANDE DIRECTE ($${data.price})</button>
+                                <button class="btn btn-modal-secondary" onclick="closeProductModal()">FERMER</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: Shared Guide Application Pas à Pas -->
+                <div id="tab-guide" class="modal-tab-pane" style="padding-top: 20px;">
+                    <div class="modal-guide-header">
+                        <div class="nl-subtitle">PROTOCOLE D'APPLICATION EXPERT</div>
+                        <h3 class="modal-guide-title">GUIDE D'APPLICATION PAS À PAS</h3>
+                        <p class="modal-guide-sub">Suivez ces étapes pour une accroche nanométrique optimale et une durabilité maximale</p>
+                    </div>
+
+                    <div class="guide-steps-grid">
+                        <div class="guide-step-card">
+                            <span class="step-number">ÉTAPE 01</span>
+                            <span class="step-time">⏱️ 1 - 3 Heures</span>
+                            <div class="step-card-title">PRÉPARATION DE SURFACE</div>
+                            <p class="step-card-desc">La clé d'une liaison nanométrique. La céramique a besoin d'une surface parfaitement nue pour s'accrocher chimiquement au vernis. Tout résidu de cire ruinera la longévité.</p>
+                            <ul class="step-list">
+                                <li>Laver minutieusement avec shampoing dégraissant pH neutre</li>
+                                <li>Passer la barre d'argile (Clay bar) pour décontaminer</li>
+                                <li>Polissage de correction des micro-rayures et tourbillons</li>
+                                <li>Dégraissage complet à la solution Isopropylique (IPA Cleaner)</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-step-card">
+                            <span class="step-number">ÉTAPE 02</span>
+                            <span class="step-time">⏱️ 30 - 60 Min</span>
+                            <div class="step-card-title">APPLICATION DU TRAITEMENT</div>
+                            <p class="step-card-desc">Application méthodique par sections réduites pour assurer un film homogène.</p>
+                            <ul class="step-list">
+                                <li>Déposer 8 à 10 gouttes sur la suédine entourant le bloc mousse</li>
+                                <li>Appliquer en mouvements croisés (damier horizontal & vertical)</li>
+                                <li>Travailler sur des zones de 50x50 cm à la fois</li>
+                                <li>Maintenir une pression uniforme sans trop appuyer</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-step-card">
+                            <span class="step-number">ÉTAPE 03</span>
+                            <span class="step-time">⏱️ 1 - 3 Min Flash</span>
+                            <div class="step-card-title">ESSUYAGE & NIVELLEMENT</div>
+                            <p class="step-card-desc">Le temps de flash dépend de la température ambiante (15°C - 25°C idéaux).</p>
+                            <ul class="step-list">
+                                <li>Observer l'apparition de l'effet arc-en-ciel (flash)</li>
+                                <li>Essuyer avec une 1ère microfibre propre à poils courts</li>
+                                <li>Lustrer avec une 2ème suédine haute densité sans laisser de trace</li>
+                                <li>Contrôler sous lampe d'inspection pour éviter tout "high spot"</li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-step-card">
+                            <span class="step-number">ÉTAPE 04</span>
+                            <span class="step-time">⏱️ 24h / 7 Jours</span>
+                            <div class="step-card-title">PHASE DE SÉCHAGE & CURAGE</div>
+                            <p class="step-card-desc">Cristallisation totale du réseau moléculaire 3D.</p>
+                            <ul class="step-list">
+                                <li>Garder le véhicule au sec à l'abri de l'eau pendant 24h minimum</li>
+                                <li>Ne pas laver le véhicule au shampoing pendant 7 jours</li>
+                                <li>Séchage accéléré possible sous lampe infrarouge (60°C pendant 15 min)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: Shared FAQ -->
+                <div id="tab-faq" class="modal-tab-pane" style="padding-top: 20px;">
+                    <div class="modal-guide-header">
+                        <div class="nl-subtitle">CENTRE D'ASSISTANCE VELOX</div>
+                        <h3 class="modal-guide-title">QUESTIONS FRÉQUENTES (FAQ)</h3>
+                        <p class="modal-guide-sub">Réponses aux questions les plus posées par nos utilisateurs et applicateurs agréés</p>
+                    </div>
+
+                    <div class="modal-faq-container">
+                        <div class="faq-item" onclick="toggleFaq(this)">
+                            <button class="faq-question">QUELLE EST LA DIFFÉRENCE ENTRE UN TRAITEMENT CÉRAMIQUE SIO2 ET LE GRAPHÈNE VELOX ?</button>
+                            <div class="faq-answer">
+                                Le traitement au graphène offre une meilleure dissipation thermique et une résistance accrue aux taches d'eau alcalines (water spots). Grâce à sa structure nanométrique en nid d'abeille, il augmente l'angle hydrophobe (jusqu'à 137°) et offre une durabilité jusqu'à 2 fois supérieure aux céramiques SiO2 traditionnelles.
+                            </div>
+                        </div>
+
+                        <div class="faq-item" onclick="toggleFaq(this)">
+                            <button class="faq-question">PUIS-JE APPLIQUER LE REVÊTEMENT VELOX SUR UN FILM PROTECTEUR PPF OU UN COVERING ?</button>
+                            <div class="faq-answer">
+                                Absolument ! Notre formule Diamond Shield 12H est spécifiquement élaborée pour les carrosseries avec films PPF et vinyles (finitions mates ou brillantes). Elle s'agrippe fortement sans créer de surbrillance indésirable sur les mats et protège le film contre le jaunissement UV.
+                            </div>
+                        </div>
+
+                        <div class="faq-item" onclick="toggleFaq(this)">
+                            <button class="faq-question">COMBIEN DE COUCHES DE REVÊTEMENT DOIS-JE APPLIQUER ?</button>
+                            <div class="faq-answer">
+                                Une seule couche suffit pour obtenir une protection maximale et des performances hydrophobes exceptionnelles. Vous pouvez toutefois appliquer une 2ème couche 1 à 2 heures après la première pour augmenter la profondeur du brillant et la résistance mécanique.
+                            </div>
+                        </div>
+
+                        <div class="faq-item" onclick="toggleFaq(this)">
+                            <button class="faq-question">COMMENT ENTRETENIR MA CARROSSERIE APRÈS L'APPLICATION DU TRAITEMENT ?</button>
+                            <div class="faq-answer">
+                                Utilisez uniquement un shampoing automobile doux à pH neutre, sans cires ni additifs synthétiques. Évitez impérativement les stations de lavage automatique à rouleaux. La surface lisse repousse la saleté, un simple rinçage suffit la plupart du temps.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 4: Shared Reviews -->
+                <div id="tab-reviews" class="modal-tab-pane" style="padding-top: 20px;">
+                    <div class="modal-guide-header">
+                        <div class="nl-subtitle">RETOUR D'EXPÉRIENCE PROFESSIONNEL</div>
+                        <h3 class="modal-guide-title">TÉMOIGNAGES DE PROFESSIONNELS</h3>
+                        <p class="modal-guide-sub">Découvrez l'avis des detailers et centres esthétiques partenaires</p>
+                    </div>
+
+                    <div class="reviews-grid">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div>
+                                    <span class="review-author">ALEXANDRE G.</span>
+                                    <span class="review-role">Fondateur de Prestige Detail</span>
+                                    <span class="review-vehicle">Porsche 911 GT3 RS (Covering Mat)</span>
+                                </div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                            <div class="review-quote">
+                                "Le Diamond Shield 12H est une révolution pour les films mates. Il maintient l'aspect mat satiné d'origine sans aucun blanchiment ni effet brillant indésirable tout en offrant un perlage d'eau digne d'une supercar."
+                            </div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div>
+                                    <span class="review-author">MARC-ANTOINE L.</span>
+                                    <span class="review-role">Propriétaire d'un Centre Esthétique</span>
+                                    <span class="review-vehicle">Tesla Model S Plaid (Noir Obsidian)</span>
+                                </div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                            <div class="review-quote">
+                                "L'application du Graphene Ultra est d'une facilité déconcertante par rapport aux anciennes formulations. L'effet arc-en-ciel après pose est très visible, l'essuyage se fait sans forcer et le fini brillant est incroyablement profond."
+                            </div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div>
+                                    <span class="review-author">JULIEN M.</span>
+                                    <span class="review-role">Detailer Certifié Master</span>
+                                    <span class="review-vehicle">Ferrari F8 Tributo</span>
+                                </div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                            <div class="review-quote">
+                                "Après 18 mois et 20 000 km, le perlage sur la carrosserie est comme au premier jour. Velox repousse l'eau et la poussière de manière spectaculaire."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shared Newsletter Box at Modal Bottom -->
+                <div class="modal-newsletter">
+                    <div class="nl-subtitle">RESTAY INFORMÉ</div>
+                    <h4 class="nl-title">NEWSLETTER PRIVÉE VELOX</h4>
+                    <p class="nl-desc">Inscrivez-vous pour recevoir nos offres exclusives, guides de detailing avancés et actualités technologiques.</p>
+                    <form class="nl-form" onsubmit="event.preventDefault(); alert('Merci pour votre inscription à la Newsletter Privée VELOX !');">
+                        <input type="email" placeholder="votre.email@adresse.com" required class="nl-input">
+                        <button type="submit" class="nl-btn">S'INSCRIRE</button>
+                    </form>
+                </div>
+            `;
+
+            const modal = document.getElementById('productModal');
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function switchModalTab(tabName, btnElement) {
+            document.querySelectorAll('.modal-tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.modal-tab-pane').forEach(pane => pane.classList.remove('active'));
+            if (btnElement) btnElement.classList.add('active');
+            const pane = document.getElementById('tab-' + tabName);
+            if (pane) pane.classList.add('active');
+        }
+
+        function toggleFaq(faqElement) {
+            faqElement.classList.toggle('active');
+        }
+
+        function closeProductModal() {
+            const modal = document.getElementById('productModal');
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        function handleOverlayClick(e) {
+            if (e.target.classList.contains('modal-overlay')) {
+                closeProductModal();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeProductModal();
+            }
+        });
+
+        function navigateToSection(e, sectionId) {
+            if (e) e.preventDefault();
+            const section = document.getElementById(sectionId);
+            if (section) {
+                // Remove active class from all nav items
+                document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+                
+                // Add active class to corresponding link
+                const activeLink = document.querySelector(`.nav-item[href="#${sectionId}"]`);
+                if (activeLink) activeLink.classList.add('active');
+
+                // Smooth scroll to section
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const feedback = document.getElementById('contactFeedback');
+            const name = document.getElementById('c-name').value;
+            
+            feedback.style.display = 'block';
+            feedback.className = 'contact-feedback success';
+            feedback.innerHTML = `✅ Merci ${name} ! Votre message a été transmis avec succès à notre équipe technique. Nous vous répondrons sous 24 heures.`;
+            
+            e.target.reset();
+            setTimeout(() => {
+                feedback.style.display = 'none';
+            }, 6000);
+        }
+
+        // Scroll spy to activate nav link based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = ['products', 'technology', 'about', 'contact'];
+            const scrollPos = window.scrollY + 180;
+
+            sections.forEach(id => {
+                const sec = document.getElementById(id);
+                if (sec) {
+                    const top = sec.offsetTop;
+                    const height = sec.offsetHeight;
+                    if (scrollPos >= top && scrollPos < top + height) {
+                        document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+                        const link = document.querySelector(`.nav-item[href="#${id}"]`);
+                        if (link) link.classList.add('active');
+                    }
+                }
+            });
+        });
+
+        // --- Order & Purchase Management System ---
+        let currentOrder = {
+            productId: 'product1',
+            quantity: 1,
+            paymentMethod: 'paypal'
+        };
+
+        function openOrderModal(productId) {
+            if (productId && productsData[productId]) {
+                currentOrder.productId = productId;
+            }
+            currentOrder.quantity = 1;
+
+            renderOrderModal();
+
+            const modal = document.getElementById('orderModal');
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function renderOrderModal() {
+            const product = productsData[currentOrder.productId];
+            if (!product) return;
+
+            // Calculate pricing in $
+            const basePrice = product.price;
+            const finalTotal = basePrice * currentOrder.quantity;
+
+            const orderModalBody = document.getElementById('orderModalBody');
+            orderModalBody.innerHTML = `
+                <div class="modal-guide-header" style="text-align: left; margin-bottom: 20px;">
+                    <div class="nl-subtitle">COMMANDE DIRECTE SÉCURISÉE VELOX</div>
+                    <h2 class="modal-title">VALIDER VOTRE COMMANDE</h2>
+                    <p class="modal-guide-sub">Expédition express sous 24-48h avec garantie d'authenticité ISO9001</p>
+                </div>
+
+                <div class="order-grid">
+                    <!-- Left: Order Product Summary -->
+                    <div class="order-summary-box">
+                        <div class="order-product-preview">
+                            <img src="${product.image}" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/' + product.id + '.jpg';}else if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/' + product.id + '.svg';}else{this.onerror=null; this.style.display='none';}" alt="${product.alt}" class="order-product-img">
+                            <div>
+                                <div class="order-product-title">${product.title}</div>
+                                <div class="order-product-price">$${product.price}.00</div>
+                                <span class="product-badge" style="margin-top: 4px; display: inline-block;">${product.quality} - ${product.capacity}</span>
+                            </div>
+                        </div>
+
+                        <!-- Product Selector Dropdown -->
+                        <div class="form-group">
+                            <label for="orderProductSelect">CHOIX DU PRODUIT :</label>
+                            <select id="orderProductSelect" onchange="changeOrderProduct(this.value)">
+                                <option value="product1" ${currentOrder.productId === 'product1' ? 'selected' : ''}>Graphène Céramique 10H (A++) - $59.00</option>
+                                <option value="product2" ${currentOrder.productId === 'product2' ? 'selected' : ''}>Graphène Ultra 10H (A+++) - $89.00</option>
+                                <option value="product3" ${currentOrder.productId === 'product3' ? 'selected' : ''}>Diamond Shield 12H (A+++++) - $119.00</option>
+                            </select>
+                        </div>
+
+                        <!-- Quantity Selector -->
+                        <div class="form-group">
+                            <label>QUANTITÉ :</label>
+                            <div class="qty-counter">
+                                <button type="button" class="qty-btn" onclick="changeOrderQty(-1)">-</button>
+                                <span class="qty-val">${currentOrder.quantity}</span>
+                                <button type="button" class="qty-btn" onclick="changeOrderQty(1)">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Total Price Breakdown -->
+                        <div class="price-breakdown">
+                            <div class="price-row">
+                                <span>Sous-total (${currentOrder.quantity}x ${product.title}) :</span>
+                                <span>$${finalTotal}.00</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Livraison Express :</span>
+                                <span style="color: #10b981; font-weight: bold;">GRATUITE ($0.00)</span>
+                            </div>
+                            <div class="price-row total-row">
+                                <span>TOTAL À PAYER :</span>
+                                <span class="total-amount">$${finalTotal}.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Customer Form & Payment -->
+                    <form class="contact-form" onsubmit="submitOrder(event)">
+                        <h3 style="font-family: 'Orbitron', sans-serif; font-size: 13px; color: #fff; margin-bottom: 10px;">INFORMATIONS DE LIVRAISON</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="o-name">Nom & Prénom *</label>
+                                <input type="text" id="o-name" required placeholder="Ex: Alex Martin">
+                            </div>
+                            <div class="form-group">
+                                <label for="o-phone">Téléphone *</label>
+                                <input type="tel" id="o-phone" required placeholder="+33 6 12 34 56 78">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="o-email">Email de confirmation *</label>
+                            <input type="email" id="o-email" required placeholder="votre.email@exemple.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="o-address">Adresse de livraison *</label>
+                            <input type="text" id="o-address" required placeholder="Numéro, Rue, Bâtiment...">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="o-zip">Code Postal *</label>
+                                <input type="text" id="o-zip" required placeholder="75008">
+                            </div>
+                            <div class="form-group">
+                                <label for="o-city">Ville *</label>
+                                <input type="text" id="o-city" required placeholder="Paris">
+                            </div>
+                            <div class="form-group">
+                                <label for="o-country">Pays *</label>
+                                <select id="o-country">
+                                    <option value="France">France</option>
+                                    <option value="Belgique">Belgique</option>
+                                    <option value="Suisse">Suisse</option>
+                                    <option value="Luxembourg">Luxembourg</option>
+                                    <option value="Autre">Autre Europe / International</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 15px; background: rgba(0, 162, 255, 0.08); border: 1px solid rgba(0, 162, 255, 0.3); border-radius: 10px; padding: 14px;">
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                <span style="font-size: 24px;">🅿️</span>
+                                <div>
+                                    <strong style="color: #ffffff; font-size: 13px;">PAIEMENT SÉCURISÉ PAYPAL EXPRESS</strong>
+                                    <div style="font-size: 11px; color: #94a3b8;">Protection des acheteurs PayPal garantie</div>
+                                </div>
+                            </div>
+                            <p style="font-size: 11px; color: #cbd5e1; margin: 0; line-height: 1.4;">
+                                🔒 Après avoir validé vos coordonnées de livraison, vous serez immédiatement redirigé vers le portail officiel <strong>PayPal</strong> pour finaliser votre règlement en toute sécurité.
+                            </p>
+                        </div>
+
+                        <button type="submit" class="btn btn-buy btn-buy-lg" style="margin-top: 20px; background: linear-gradient(135deg, #0070ba 0%, #003087 100%);">
+                            💳 VALIDER ET PAYER VIA PAYPAL ($${finalTotal}.00)
+                        </button>
+                    </form>
+                </div>
+            `;
+        }
+
+        function changeOrderProduct(productId) {
+            currentOrder.productId = productId;
+            renderOrderModal();
+        }
+
+        function changeOrderQty(delta) {
+            currentOrder.quantity = Math.max(1, currentOrder.quantity + delta);
+            renderOrderModal();
+        }
+
+        function submitOrder(e) {
+            e.preventDefault();
+            const name = document.getElementById('o-name').value;
+            const email = document.getElementById('o-email').value;
+            const phone = document.getElementById('o-phone').value;
+            const address = document.getElementById('o-address').value;
+            const zip = document.getElementById('o-zip').value;
+            const city = document.getElementById('o-city').value;
+            const country = document.getElementById('o-country').value;
+
+            const product = productsData[currentOrder.productId];
+            const orderNum = 'VLX-' + new Date().getFullYear() + '-' + Math.floor(100000 + Math.random() * 900000);
+
+            // Calculate total
+            const total = product.price * currentOrder.quantity;
+
+            const deliveryDate = new Date();
+            deliveryDate.setDate(deliveryDate.getDate() + 2);
+
+            const paypalUrl = product.paypalUrl || "https://www.paypal.com";
+
+            // Save order info locally
+            try {
+                localStorage.setItem('velox_last_order', JSON.stringify({
+                    orderNum, name, email, phone, address, zip, city, country, product: product.title, total, currency: '$', date: new Date().toISOString()
+                }));
+            } catch (err) {
+                console.warn('LocalStorage error:', err);
+            }
+
+            // Render receipt modal with direct PayPal link
+            const receiptBody = document.getElementById('receiptModalBody');
+            receiptBody.innerHTML = `
+                <div class="receipt-card">
+                    <span class="receipt-icon">🅿️</span>
+                    <h2 class="section-main-title" style="margin-bottom: 5px;">REDIRECTION VERS PAYPAL...</h2>
+                    <p class="section-desc">Merci <strong>${name}</strong> ! Vos informations de livraison sont enregistrées. Vous allez être redirigé vers la passerelle sécurisée PayPal pour effectuer le paiement de <strong>$${total}.00</strong>.</p>
+
+                    <div class="receipt-code-box">
+                        <div class="receipt-code-label">RÉFÉRENCE COMMANDE VELOX</div>
+                        <div class="receipt-code-val">${orderNum}</div>
+                    </div>
+
+                    <table class="receipt-details-table">
+                        <tr><td>Produit sélectionné :</td><td><strong>${product.title} (${product.quality})</strong></td></tr>
+                        <tr><td>Quantité :</td><td>${currentOrder.quantity} Flacon(s) (30ml)</td></tr>
+                        <tr><td>Montant total :</td><td><strong style="color: #38bdf8; font-size: 15px;">$${total}.00</strong></td></tr>
+                        <tr><td>Adresse de livraison :</td><td>${address}, ${zip} ${city}, ${country}</td></tr>
+                        <tr><td>Email de contact :</td><td>${email}</td></tr>
+                    </table>
+
+                    <div style="background: rgba(0, 112, 186, 0.15); border: 1px solid #0070ba; border-radius: 8px; padding: 14px; max-width: 500px; margin: 15px auto; font-size: 12px; color: #ffffff;">
+                        🔒 Si la redirection automatique vers PayPal ne se lance pas dans 3 secondes, cliquez sur le bouton ci-dessous :
+                    </div>
+
+                    <div class="receipt-actions" style="flex-direction: column; align-items: center; gap: 10px;">
+                        <a href="${paypalUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-buy btn-buy-lg" style="background: linear-gradient(135deg, #0070ba 0%, #003087 100%); width: 100%; max-width: 400px; text-decoration: none; text-align: center;">
+                            👉 CLIQUER ICI POUR PAYER SUR PAYPAL ($${total}.00)
+                        </a>
+                        <button class="btn btn-modal-secondary" onclick="closeReceiptModal()" style="margin-top: 5px;">FERMER LA FENÊTRE</button>
+                    </div>
+                </div>
+            `;
+
+            closeOrderModal();
+
+            const receiptModal = document.getElementById('orderReceiptModal');
+            receiptModal.classList.add('active');
+            receiptModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+
+            // Open PayPal in a new window/tab immediately upon user click action (avoids iframe X-Frame-Options block)
+            try {
+                window.open(paypalUrl, '_blank', 'noopener,noreferrer');
+            } catch (err) {
+                console.warn('Popup opened fallback:', err);
+            }
+        }
+
+        function closeOrderModal() {
+            const modal = document.getElementById('orderModal');
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        function closeReceiptModal() {
+            const modal = document.getElementById('orderReceiptModal');
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        function handleOrderOverlayClick(e) {
+            if (e.target.classList.contains('modal-overlay')) {
+                closeOrderModal();
+            }
+        }
+
+        function handleReceiptOverlayClick(e) {
+            if (e.target.classList.contains('modal-overlay')) {
+                closeReceiptModal();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('error', () => {
+                    if (!img.dataset.fallback) {
+                        img.dataset.fallback = 'true';
+                        const title = img.alt || 'VELOX Coating';
+                        img.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"><rect width="100%" height="100%" fill="%230b1928"/><circle cx="200" cy="150" r="70" fill="%2300a2ff" opacity="0.12"/><text x="50%" y="46%" fill="%2300a2ff" font-family="sans-serif" font-weight="bold" font-size="16" text-anchor="middle">${encodeURIComponent(title)}</text><text x="50%" y="58%" fill="%238fa0b0" font-family="sans-serif" font-size="11" text-anchor="middle">VELOX PROTECTION</text></svg>`;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+                                         
