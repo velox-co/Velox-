@@ -1,48 +1,43 @@
 ========================================================================
-             دليل رفع الصور والشعار - VELOX Images & Logo Guide
+             VELOX Images & Logo Upload Guide
 ========================================================================
 
-1. الشعار الجديد (Logo):
--------------------------
-تم حذف الشعار القديم. يمكنك الآن إضافة شعارك الجديد بأي صيغة ترغب بها في هذا المجلد (`images/`):
-- يمكنك التسمية باسم:
-  • logo.eps  (صيغة EPS المتجهية - Recommended for Vector EPS)
-  • logo.svg  (صيغة SVG المتجهية)
-  • logo.png  (صيغة PNG مع خلفية شفافة)
-  • logo.jpg  (صيغة JPG)
-
-يقوم الموقع تلقائياً بالبحث عن ملفات الشعار بالترتيب (EPS -> SVG -> PNG -> JPG) وعرض الشعار فور رفعه مباشرة في الهيدر والفوتر.
+1. Brand Logo:
+-----------------------
+You can add or update the logo in the `images/` directory with the following naming:
+• logo.eps  (or logo.svg / logo.png / logo.jpg)
+The website will automatically recognize and render it in optimal dimensions.
 
 
-2. صور المنتجات الثلاثة (Product Images):
--------------------------------------------
-ضع صور المنتجات داخل مجلد (`images/`) بالتسمية التالية:
-
-- المنتج الأول (Graphène Céramique 10H):
-  اسم الصورة: product1.png  أو  product1.jpg  أو  product1.svg
-
-- المنتج الثاني (Graphene Ultra 10H):
-  اسم الصورة: product2.png  أو  product2.jpg  أو  product2.svg
-
-- المنتج الثالث (Diamond Shield 12H):
-  اسم الصورة: product3.png  أو  product3.jpg  أو  product3.svg
+2. Main Product Images (Displayed on Homepage):
+------------------------------------------------------------------
+Each product has one primary image displayed on the main page:
+• First Product: product1.png  (or product1.jpg / product1.svg)
+• Second Product: product2.png  (or product2.jpg / product2.svg)
+• Third Product: product3.png  (or product3.jpg / product3.svg)
 
 
-========================================================================
-              FRENCH INSTRUCTIONS / INSTRUCTIONS EN FRANÇAIS
-========================================================================
+3. Additional Product Images (Displayed in Details Modal):
+--------------------------------------------------------------------------------
+To display multiple images for the same product inside the details modal without showing them on the main page:
+Name the additional images in `images/` using `_2`, `_3`, or `_4` suffixes:
 
-1. LOGO DE LA MARQUE :
-- L'ancien logo a été supprimé.
-- Vous pouvez ajouter votre propre logo dans le dossier `images/` sous l'un des noms suivants :
-  • logo.eps
-  • logo.svg
-  • logo.png
-  • logo.jpg
-- Le site détecte automatiquement le fichier dans l'ordre (EPS -> SVG -> PNG -> JPG).
+- Product 1 (product1):
+  • Additional Image 2: product1_2.png  (or .jpg / .jpeg / .svg / .webp)
+  • Additional Image 3: product1_3.png
+  • Additional Image 4: product1_4.png
+  ...
 
-2. IMAGES DES PRODUITS :
-- Produit 1 : product1.png / product1.jpg / product1.svg
-- Produit 2 : product2.png / product2.jpg / product2.svg
-- Produit 3 : product3.png / product3.jpg / product3.svg
+- Product 2 (product2):
+  • Additional Image 2: product2_2.png  (or .jpg / .jpeg / .svg)
+  • Additional Image 3: product2_3.png
+  ...
+
+- Product 3 (product3):
+  • Additional Image 2: product3_2.png
+  • Additional Image 3: product3_3.png
+  ...
+
+The website will automatically discover these extra images and display them as interactive thumbnails.
+
 ========================================================================

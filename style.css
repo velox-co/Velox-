@@ -1,4 +1,4 @@
-/* --- إعدادات وتصفير عام --- */
+/* --- General Settings & Reset --- */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
@@ -23,7 +23,7 @@ body {
     overflow-x: hidden;
 }
 
-/* --- الواجهة العلوية (Header Container) --- */
+/* --- Header Container --- */
 .header-container {
     background-color: #050b11;
     background-image: 
@@ -80,7 +80,7 @@ body {
     color: #ffffff;
 }
 
-/* التوهج الأزرق تحت خيار Products */
+/* Blue glow under Products option */
 .nav-item.active {
     color: #67c8ff;
     text-shadow: 0 0 10px rgba(0, 162, 255, 0.7);
@@ -100,7 +100,7 @@ body {
     z-index: 5;
 }
 
-/* الشعار المدمج واللوجو */
+/* Brand Logo & Name */
 .brand-center {
     display: flex;
     flex-direction: column;
@@ -140,7 +140,7 @@ body {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
-/* الخط الفاصل المضاء */
+/* Illuminated Divider Line */
 .divider-line {
     width: 100%;
     height: 1px;
@@ -158,7 +158,7 @@ body {
     z-index: 1;
 }
 
-/* العنوان الرئيسي */
+/* Main Headline */
 .hero-title-container {
     margin-top: 25px;
 }
@@ -172,7 +172,7 @@ body {
     text-shadow: 0 3px 6px rgba(0,0,0,0.8);
 }
 
-/* --- حاوية المنتجات --- */
+/* --- Products Container --- */
 .products-container {
     max-width: 1100px;
     margin: 30px auto;
@@ -272,7 +272,7 @@ body {
 .btn-light { background-color: #ffffff; color: #000; }
 .btn-dark { background-color: #0b2240; color: #fff; }
 
-/* جداول المواصفات */
+/* Specs Tables */
 .specs-table {
     width: 100%;
     border-collapse: collapse;
@@ -310,7 +310,7 @@ body {
 
 .dark-text .badge span { color: #0b2240; }
 
-/* --- قسم التطبيقات --- */
+/* --- Applications Section --- */
 .applications-section {
     max-width: 1100px;
     margin: 40px auto;
@@ -353,7 +353,7 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
-/* --- الفوتر --- */
+/* --- Footer --- */
 .main-footer {
     display: flex;
     justify-content: space-between;
@@ -380,7 +380,7 @@ body {
 .footer-contact a { color: #667788; text-decoration: none; }
 .footer-sep { margin: 0 8px; }
 
-/* --- التجاوب مع الهواتف --- */
+/* --- Responsive Layout --- */
 @media (max-width: 768px) {
     .header-container {
         padding: 15px 0 25px 0;
@@ -455,7 +455,7 @@ body {
     }
 }
 
-/* --- Modal (النافذة المنبثقة للتفاصيل الإضافية) --- */
+/* --- Modal (Additional Details Popup) --- */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -569,7 +569,61 @@ body {
     max-height: 240px;
     object-fit: contain;
     filter: drop-shadow(0 10px 15px rgba(0,0,0,0.8));
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+/* --- Modal Product Gallery --- */
+.modal-gallery-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+}
+
+.modal-gallery-thumbs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    overflow-x: auto;
+    width: 100%;
+    padding: 6px 2px;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+.modal-gallery-thumbs::-webkit-scrollbar {
+    height: 4px;
+}
+.modal-gallery-thumbs::-webkit-scrollbar-thumb {
+    background: rgba(0, 162, 255, 0.4);
+    border-radius: 4px;
+}
+
+.modal-thumb {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.modal-thumb:hover {
+    border-color: #00a2ff;
+    transform: scale(1.08);
+    background: rgba(0, 162, 255, 0.1);
+}
+
+.modal-thumb.active {
+    border-color: #00a2ff;
+    box-shadow: 0 0 12px rgba(0, 162, 255, 0.7);
+    background: rgba(0, 162, 255, 0.15);
 }
 
 .modal-quick-stats {
@@ -1890,5 +1944,435 @@ body {
         padding: 8px 14px;
     }
 }
+
+/* ==========================================================================
+   ADMIN PANEL & CRITICAL INVENTORY ALERT STYLES
+   ========================================================================== */
+
+/* Admin Link & Alert Badge in Nav/Footer */
+.admin-nav-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 162, 255, 0.1);
+    border: 1px solid rgba(0, 162, 255, 0.3);
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: #38bdf8 !important;
+    font-weight: 700 !important;
+    transition: all 0.25s ease;
+}
+
+.admin-nav-btn:hover {
+    background: rgba(0, 162, 255, 0.25);
+    border-color: #00a2ff;
+    box-shadow: 0 0 14px rgba(0, 162, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+.admin-alert-badge {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 900;
+    padding: 2px 7px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+    animation: criticalPulse 1.8s infinite;
+    letter-spacing: 0.5px;
+}
+
+@keyframes criticalPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.8);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+        transform: scale(1.08);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+        transform: scale(1);
+    }
+}
+
+/* Admin Modal Container */
+.admin-modal-container {
+    max-width: 950px;
+    width: 95%;
+    border: 1px solid rgba(0, 162, 255, 0.35);
+    background: rgba(11, 25, 40, 0.96);
+    backdrop-filter: blur(20px);
+}
+
+/* Critical Stock Alert Box */
+.critical-alert-banner {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(185, 28, 28, 0.3) 100%);
+    border: 2px solid #ef4444;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.35);
+    position: relative;
+    overflow: hidden;
+    animation: alertBorderGlow 2.5s infinite ease-in-out;
+}
+
+@keyframes alertBorderGlow {
+    0%, 100% { border-color: #ef4444; box-shadow: 0 0 20px rgba(239, 68, 68, 0.3); }
+    50% { border-color: #f97316; box-shadow: 0 0 32px rgba(249, 115, 22, 0.55); }
+}
+
+.critical-alert-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 15px;
+}
+
+.critical-alert-icon {
+    font-size: 32px;
+    background: rgba(239, 68, 68, 0.25);
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(239, 68, 68, 0.5);
+    flex-shrink: 0;
+}
+
+.critical-alert-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    color: #fca5a5;
+    margin: 0 0 4px 0;
+    letter-spacing: 0.5px;
+}
+
+.critical-alert-sub {
+    font-size: 12px;
+    color: #fecdd3;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.critical-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.critical-item-card {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    border-radius: 10px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.critical-item-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.critical-item-img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    padding: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.critical-item-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.critical-item-qty {
+    font-size: 11px;
+    color: #f87171;
+    font-weight: 800;
+    margin-top: 2px;
+}
+
+.btn-restock-sm {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.btn-restock-sm:hover {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    transform: scale(1.04);
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.5);
+}
+
+.btn-restock-all {
+    margin-top: 15px;
+    width: 100%;
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    color: #ffffff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-restock-all:hover {
+    background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Admin Section Headers */
+.admin-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.admin-section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    color: #38bdf8;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Inventory List Table / Grid */
+.inventory-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.inventory-row {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(0, 162, 255, 0.18);
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    transition: all 0.25s ease;
+}
+
+.inventory-row:hover {
+    border-color: rgba(0, 162, 255, 0.4);
+    background: rgba(15, 23, 42, 0.85);
+}
+
+.inventory-row.is-critical {
+    border-color: rgba(239, 68, 68, 0.5);
+    background: rgba(239, 68, 68, 0.08);
+}
+
+.inv-prod-details {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 2;
+}
+
+.inv-prod-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.inv-prod-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    margin-bottom: 3px;
+}
+
+.inv-prod-meta {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+/* Stock Pills / Status Badges */
+.stock-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+.stock-pill-ok {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.stock-pill-critical {
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.6);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+    animation: criticalPulse 2s infinite;
+}
+
+.stock-pill-out {
+    background: rgba(127, 29, 29, 0.4);
+    color: #fca5a5;
+    border: 1px solid #dc2626;
+}
+
+/* Stock Counter Controls */
+.inv-stock-ctrl {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.inv-qty-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background: rgba(0, 162, 255, 0.15);
+    border: 1px solid rgba(0, 162, 255, 0.3);
+    color: #38bdf8;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.inv-qty-btn:hover {
+    background: #00a2ff;
+    color: #ffffff;
+}
+
+.inv-qty-input {
+    width: 55px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 162, 255, 0.3);
+    border-radius: 6px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.inv-qty-input:focus {
+    outline: none;
+    border-color: #00a2ff;
+    box-shadow: 0 0 8px rgba(0, 162, 255, 0.5);
+}
+
+.inv-quick-add {
+    display: flex;
+    gap: 4px;
+}
+
+.btn-add-pill {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #cbd5e1;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-add-pill:hover {
+    background: rgba(0, 162, 255, 0.2);
+    border-color: #00a2ff;
+    color: #ffffff;
+}
+
+/* Toast Notification */
+.admin-toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #ffffff;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.admin-toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .inventory-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .inv-stock-ctrl {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .critical-items-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 

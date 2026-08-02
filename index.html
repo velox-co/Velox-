@@ -1,87 +1,85 @@
-
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VELOX - Protection Beyond Compare</title>
     <link rel="stylesheet" href="style.css">
-    <!-- استيراد الخطوط -->
+    <!-- Font Imports -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- الواجهة العلوية المتكاملة مع اللوجو -->
+    <!-- Header Navigation Bar -->
     <header class="header-container">
         <div class="navbar-wrapper">
-            <!-- الروابط اليسرى -->
+            <!-- Left Nav Links -->
             <nav class="nav-group nav-left">
                 <a href="#products" class="nav-item active" onclick="navigateToSection(event, 'products')">Products</a>
                 <a href="#technology" class="nav-item" onclick="navigateToSection(event, 'technology')">Technology</a>
             </nav>
 
-            <!-- الشعار الأوسط المدمج -->
+            <!-- Center Brand Component -->
             <div class="brand-center" onclick="navigateToSection(event, 'products')" style="cursor: pointer;">
-                <div class="logo-wrapper">
-                    <img src="images/logo.eps" onerror="if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/logo.svg';}else if(!this.dataset.triedPng){this.dataset.triedPng='1'; this.src='images/logo.png';}else if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/logo.jpg';}else{this.style.display='none';}" alt="VELOX Logo" class="brand-logo-img">
-                </div>
+                <span class="brand-name">VELOX</span>
             </div>
 
-            <!-- الروابط اليمنى -->
+            <!-- Right Nav Links -->
             <nav class="nav-group nav-right">
                 <a href="#about" class="nav-item" onclick="navigateToSection(event, 'about')">About</a>
                 <a href="#contact" class="nav-item" onclick="navigateToSection(event, 'contact')">Contact</a>
             </nav>
         </div>
 
-        <!-- الخط الفاصل المضاء خلف اللوجو -->
+        <!-- Illuminated Line Divider -->
         <div class="divider-line"></div>
 
-        <!-- العنوان الرئيسي -->
+        <!-- Main Headline -->
         <div class="hero-title-container">
             <h1 class="main-title">PROTECTION BEYOND COMPARE</h1>
         </div>
     </header>
 
-    <!-- حاوية المنتجات الرئيسية -->
+    <!-- Main Products Container -->
     <main id="products" class="products-container">
         
-        <!-- المنتج الأول -->
+        <!-- Product 1 -->
         <section class="product-card dark-bg">
             <div class="product-image">
                 <img src="images/product1.png" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/product1.jpg';}else if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/product1.svg';}else{this.onerror=null; this.style.display='none';}" alt="VELOX Graphene Ceramic Coating Box">
             </div>
             <div class="product-info">
-                <span class="product-badge">NOUVEAU</span>
-                <h2>REVÊTEMENT DE QUALITÉ PROFESSIONNELLE</h2>
+                <span class="product-badge">NEW</span>
+                <h2>PROFESSIONAL GRADE GRAPHENE COATING</h2>
                 <ul>
-                    <li>Dureté 10H</li>
-                    <li>Protection 3-5 ans</li>
-                    <li>Nanotechnologie Avancée</li>
-                    <li>Effet brillance spectaculaire</li>
-                    <li>Céramique adaptable</li>
+                    <li>10H Hardness</li>
+                    <li>3-5 Years Protection</li>
+                    <li>Advanced Nanotechnology</li>
+                    <li>Spectacular High Gloss Finish</li>
+                    <li>Adaptable Ceramic Matrix</li>
                 </ul>
                 <div class="card-action-group">
-                    <button class="btn btn-buy" onclick="openOrderModal('product1')">🛒 ACHETER ($59)</button>
-                    <button class="btn btn-light" onclick="openProductModal('product1')">PLUS D'INFORMATIONS</button>
+                    <button class="btn btn-buy" onclick="openOrderModal('product1')">🛒 BUY NOW ($59)</button>
+                    <button class="btn btn-light" onclick="openProductModal('product1')">MORE INFORMATION</button>
                 </div>
+                <div id="stockBadge_product1" style="margin-top: 10px;"></div>
             </div>
             <div class="product-specs">
                 <div class="card-price-tag">$59.00</div>
                 <table class="specs-table">
-                    <tr><td>Qualité</td><td>A++</td></tr>
-                    <tr><td>Capacité</td><td>30ml</td></tr>
-                    <tr><td>Ingrédient Principal</td><td>Grapheneceramic</td></tr>
-                    <tr><td>Bénéfices</td><td>Protection globale</td></tr>
+                    <tr><td>Quality</td><td>A++</td></tr>
+                    <tr><td>Capacity</td><td>30ml</td></tr>
+                    <tr><td>Main Ingredient</td><td>Grapheneceramic</td></tr>
+                    <tr><td>Benefits</td><td>Total Protection</td></tr>
                 </table>
                 <div class="badges">
-                    <div class="badge"><span class="angle">120°</span> Angle de contact</div>
-                    <div class="badge"><span class="count">500+</span> Lavages testés</div>
+                    <div class="badge"><span class="angle">120°</span> Contact Angle</div>
+                    <div class="badge"><span class="count">500+</span> Tested Washes</div>
                 </div>
             </div>
         </section>
 
-        <!-- المنتج الثاني -->
+        <!-- Product 2 -->
         <section class="product-card light-bg">
             <div class="product-image">
                 <img src="images/product2.png" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/product2.jpg';}else if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/product2.svg';}else{this.onerror=null; this.style.display='none';}" alt="Graphene Ultra 10H Bottle">
@@ -90,108 +88,110 @@
                 <span class="product-badge badge-dark">PREMIUM</span>
                 <h2 class="blue-title">GRAPHENE ULTRA 10H</h2>
                 <ul>
-                    <li>DURÉE DE VIE DE 5 ANS+</li>
-                    <li>EFFET SUPER HYDROPHOBE UNIQUE</li>
-                    <li>DURÉE DE VIE DE 5 ANS+</li>
-                    <li>EFFET BLINDAGE DE CURE</li>
-                    <li>PROTECTION EXTÉRIEURE</li>
+                    <li>5+ YEARS DURABILITY</li>
+                    <li>UNIQUE SUPER HYDROPHOBIC EFFECT</li>
+                    <li>EXTREME SCRATCH RESISTANCE</li>
+                    <li>CURE SHIELD SHINE</li>
+                    <li>EXTERIOR SURFACE PROTECTION</li>
                 </ul>
                 <div class="card-action-group">
-                    <button class="btn btn-buy" onclick="openOrderModal('product2')">🛒 ACHETER ($89)</button>
-                    <button class="btn btn-dark" onclick="openProductModal('product2')">PLUS D'INFORMATIONS</button>
+                    <button class="btn btn-buy" onclick="openOrderModal('product2')">🛒 BUY NOW ($89)</button>
+                    <button class="btn btn-dark" onclick="openProductModal('product2')">MORE INFORMATION</button>
                 </div>
+                <div id="stockBadge_product2" style="margin-top: 10px;"></div>
             </div>
             <div class="product-specs dark-specs">
                 <div class="card-price-tag">$89.00</div>
                 <table class="specs-table">
-                    <tr><td>Qualité</td><td>A+++</td></tr>
-                    <tr><td>Capacité</td><td>30ml</td></tr>
-                    <tr><td>Ingrédient Principal</td><td>Grapheneceramic</td></tr>
-                    <tr><td>Bénéfices</td><td>Ultra Protection</td></tr>
+                    <tr><td>Quality</td><td>A+++</td></tr>
+                    <tr><td>Capacity</td><td>30ml</td></tr>
+                    <tr><td>Main Ingredient</td><td>Grapheneceramic</td></tr>
+                    <tr><td>Benefits</td><td>Ultra Protection</td></tr>
                 </table>
                 <div class="badges">
-                    <div class="badge"><span class="angle">125°</span> Angle de contact</div>
-                    <div class="badge"><span class="count">1000+</span> Lavages testés</div>
+                    <div class="badge"><span class="angle">125°</span> Contact Angle</div>
+                    <div class="badge"><span class="count">1000+</span> Tested Washes</div>
                 </div>
             </div>
         </section>
 
-        <!-- المنتج الثالث -->
+        <!-- Product 3 -->
         <section class="product-card dark-bg">
             <div class="product-image">
                 <img src="images/product3.png" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/product3.jpg';}else if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/product3.svg';}else{this.onerror=null; this.style.display='none';}" alt="Diamond Shield 12H Banner">
             </div>
             <div class="product-info">
-                <span class="product-badge">EXTRÊME</span>
+                <span class="product-badge">EXTREME</span>
                 <h2>DIAMOND SHIELD 12H</h2>
-                <h3 class="sub-blue">LA RÉFÉRENCE ABSOLUE POUR PEINTURES ET VINYLES</h3>
+                <h3 class="sub-blue">THE ULTIMATE STANDARD FOR PAINTS & VINYLS</h3>
                 <ul>
-                    <li>DURETÉ 12H RÉVOLUTIONNAIRE</li>
-                    <li>PROTECTION EXTRÊME DE 7 ANS</li>
-                    <li>POUR FILM ET VINYLES</li>
-                    <li>EFFET SUPER HYDROPHOBIQUE</li>
+                    <li>REVOLUTIONARY 12H HARDNESS</li>
+                    <li>EXTREME 7-YEAR PROTECTION</li>
+                    <li>FOR PPF & VINYL FILMS</li>
+                    <li>SUPER HYDROPHOBIC EFFECT</li>
                 </ul>
                 <div class="card-action-group">
-                    <button class="btn btn-buy" onclick="openOrderModal('product3')">🛒 ACHETER ($119)</button>
-                    <button class="btn btn-light" onclick="openProductModal('product3')">PLUS D'INFORMATIONS</button>
+                    <button class="btn btn-buy" onclick="openOrderModal('product3')">🛒 BUY NOW ($119)</button>
+                    <button class="btn btn-light" onclick="openProductModal('product3')">MORE INFORMATION</button>
                 </div>
+                <div id="stockBadge_product3" style="margin-top: 10px;"></div>
             </div>
             <div class="product-specs">
                 <div class="card-price-tag">$119.00</div>
                 <table class="specs-table">
-                    <tr><td>Qualité</td><td>A+++++</td></tr>
-                    <tr><td>Capacité</td><td>30ml</td></tr>
-                    <tr><td>Protection</td><td>7 ans</td></tr>
-                    <tr><td>Bénéfices</td><td>Protection Vinyle</td></tr>
+                    <tr><td>Quality</td><td>A+++++</td></tr>
+                    <tr><td>Capacity</td><td>30ml</td></tr>
+                    <tr><td>Protection</td><td>7 Years</td></tr>
+                    <tr><td>Benefits</td><td>Vinyl & Paint Protection</td></tr>
                 </table>
                 <div class="badges">
-                    <div class="badge"><span class="angle">137°</span> Angle de contact</div>
-                    <div class="badge"><span class="count">🛡️</span> POUR FILMS VINYLES</div>
+                    <div class="badge"><span class="angle">137°</span> Contact Angle</div>
+                    <div class="badge"><span class="count">🛡️</span> FOR VINYL & PPF FILMS</div>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- قسم التكنولوجيا (Technology Section) -->
+    <!-- Technology Section -->
     <section id="technology" class="page-section technology-section">
         <div class="section-container">
             <div class="section-header-badge">
-                <span class="sub-badge">NANOTECHNOLOGIE VELOX</span>
-                <h2 class="section-main-title">NOTRE TECHNOLOGIE D'AVANT-GARDE</h2>
-                <p class="section-desc">L'alliance de la nanotechnologie au graphène et des réseaux moléculaires de silice pour une matrice auto-cicatrisante et ultra-durable.</p>
+                <span class="sub-badge">VELOX NANOTECHNOLOGY</span>
+                <h2 class="section-main-title">OUR CUTTING-EDGE TECHNOLOGY</h2>
+                <p class="section-desc">Combining graphene nanotechnology and silica molecular networks for a self-healing, ultra-durable matrix.</p>
             </div>
 
             <div class="tech-grid">
                 <div class="tech-card">
                     <div class="tech-icon-wrapper">🔬</div>
-                    <h3>MATRICE GRAPHÈNE 3D</h3>
-                    <p>Structure hexagonale à l'échelle atomique qui offre une flexibilité moléculaire exceptionnelle et une liaison chimique permanente avec le vernis d'origine.</p>
-                    <span class="tech-tag">Dureté 10H - 12H Pencil</span>
+                    <h3>3D GRAPHENE MATRIX</h3>
+                    <p>Atomic-scale hexagonal structure providing exceptional molecular flexibility and permanent chemical bonding with clear coat.</p>
+                    <span class="tech-tag">10H - 12H Pencil Hardness</span>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon-wrapper">💧</div>
-                    <h3>PERLAGE HYDROPHOBE 137°</h3>
-                    <p>Angle de contact d'eau record repoussant instantanément la pluie, la boue, les fientes et les résidus routiers pour un effet auto-nettoyant permanent.</p>
-                    <span class="tech-tag">Effet Bionique Lotus</span>
+                    <h3>137° HYDROPHOBIC BEADING</h3>
+                    <p>Record water contact angle instantly repelling rain, mud, bird droppings, and road residue for a permanent self-cleaning effect.</p>
+                    <span class="tech-tag">Bionic Lotus Effect</span>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon-wrapper">🔥</div>
-                    <h3>DISSIPATION THERMIQUE 760°C</h3>
-                    <p>Réduit la température de surface au soleil et empêche la fixation des taches d'eau alcalines dues à l'évaporation rapide.</p>
-                    <span class="tech-tag">Protection Anti-UV & Chaleur</span>
+                    <h3>760°C THERMAL DISSIPATION</h3>
+                    <p>Reduces surface temperature in direct sunlight and prevents alkaline water spot etching from rapid evaporation.</p>
+                    <span class="tech-tag">Anti-UV & Heat Protection</span>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon-wrapper">🛡️</div>
-                    <h3>COMPATIBILITÉ MULTI-SURFACES</h3>
-                    <p>Formulé pour adhérer sans altération sur peinture brillante, vernis satiné/mat, et films protecteurs PPF ou coverings vinyles.</p>
+                    <h3>MULTI-SURFACE COMPATIBILITY</h3>
+                    <p>Formulated to bond flawlessly on gloss paint, satin/matte clear coat, and protective PPF or vinyl wraps.</p>
                     <span class="tech-tag">Gloss, Matte & Vinyl</span>
                 </div>
             </div>
 
-            <!-- قسم التطبيقات المدمج -->
+            <!-- Applications Section -->
             <div class="apps-grid-wrapper">
-                <h3 class="apps-subtitle">SURFACES D'APPLICATION COMPATIBLES</h3>
+                <h3 class="apps-subtitle">COMPATIBLE APPLICATION SURFACES</h3>
                 <div class="apps-grid">
                     <div class="app-item">
                         <img src="images/gloss.png" alt="Gloss Surface">
@@ -210,36 +210,36 @@
         </div>
     </section>
 
-    <!-- قسم عن الشركة (About Section) -->
+    <!-- About Section -->
     <section id="about" class="page-section about-section">
         <div class="section-container">
             <div class="about-flex">
                 <div class="about-content">
-                    <span class="sub-badge">À PROPOS DE VELOX</span>
-                    <h2 class="section-main-title">L'EXCELLENCE DE LA PROTECTION AUTOMOBILE</h2>
+                    <span class="sub-badge">ABOUT VELOX</span>
+                    <h2 class="section-main-title">THE EXCELLENCE OF AUTOMOTIVE PROTECTION</h2>
                     <p class="about-text">
-                        VELOX est un pionnier mondial dans l'élaboration de revêtements céramiques et nanométriques de très haute pureté. Nos ingénieurs et chercheurs conçoivent des formules de protection de carrosserie élaborées pour résister aux climats les plus rigoureux.
+                        VELOX is a global pioneer in formulating ultra-pure ceramic and nanometric coatings. Our engineers and researchers design car body protection formulas engineered to withstand the harshest climates.
                     </p>
                     <p class="about-text">
-                        Chaque flacon VELOX subit un protocole strict de validation en laboratoire sous certification <strong>ISO9001</strong> et répond aux normes de sécurité internationales <strong>MSDS</strong>. Que ce soit pour des supercars, des véhicules de collection ou des coverings quotidiens, VELOX garantit une finition miroir inaltérable.
+                        Every VELOX bottle undergoes a strict laboratory validation protocol certified under <strong>ISO9001</strong> and meets international <strong>MSDS</strong> safety standards. Whether for supercars, collector vehicles, or daily wraps, VELOX guarantees an unalterable mirror finish.
                     </p>
 
                     <div class="about-stats-grid">
                         <div class="stat-card">
                             <span class="stat-number">15+</span>
-                            <span class="stat-label">Années de R&D</span>
+                            <span class="stat-label">Years of R&D</span>
                         </div>
                         <div class="stat-card">
                             <span class="stat-number">50K+</span>
-                            <span class="stat-label">Véhicules Traités</span>
+                            <span class="stat-label">Vehicles Treated</span>
                         </div>
                         <div class="stat-card">
                             <span class="stat-number">40+</span>
-                            <span class="stat-label">Pays Distribués</span>
+                            <span class="stat-label">Countries Distributed</span>
                         </div>
                         <div class="stat-card">
                             <span class="stat-number">ISO</span>
-                            <span class="stat-label">Certifié 9001/MSDS</span>
+                            <span class="stat-label">Certified 9001/MSDS</span>
                         </div>
                     </div>
                 </div>
@@ -247,38 +247,38 @@
         </div>
     </section>
 
-    <!-- قسم التواصل (Contact Section) -->
+    <!-- Contact Section -->
     <section id="contact" class="page-section contact-section">
         <div class="section-container">
             <div class="section-header-badge">
-                <span class="sub-badge">CONTACTEZ NOS EXPERTS</span>
-                <h2 class="section-main-title">DEMANDE DE DEVIS & INFORMATION</h2>
-                <p class="section-desc">Vous êtes detailer professionnel, distributeur ou particulier passionné ? Écrivez-nous pour toute question ou commande sur-mesure.</p>
+                <span class="sub-badge">CONTACT OUR EXPERTS</span>
+                <h2 class="section-main-title">QUOTE REQUEST & INFORMATION</h2>
+                <p class="section-desc">Are you a professional detailer, distributor, or passionate car owner? Write to us for any questions or custom orders.</p>
             </div>
 
             <div class="contact-grid">
                 <!-- Contact Info Box -->
                 <div class="contact-info-card">
-                    <h3>INFORMATIONS DE CONTACT</h3>
+                    <h3>CONTACT INFORMATION</h3>
                     <div class="c-info-item">
                         <span class="c-icon">✉️</span>
                         <div>
-                            <strong>Email Officiel</strong>
+                            <strong>Official Email</strong>
                             <p><a href="mailto:contact@veloxcoating.com">contact@veloxcoating.com</a></p>
                         </div>
                     </div>
                     <div class="c-info-item">
                         <span class="c-icon">🌐</span>
                         <div>
-                            <strong>Site Web Officiel</strong>
+                            <strong>Official Website</strong>
                             <p><a href="https://www.veloxcoating.com" target="_blank">www.veloxcoating.com</a></p>
                         </div>
                     </div>
                     <div class="c-info-item">
                         <span class="c-icon">⏱️</span>
                         <div>
-                            <strong>Horaires du Support</strong>
-                            <p>Du Lundi au Vendredi (8h00 - 18h00 UTC)</p>
+                            <strong>Support Hours</strong>
+                            <p>Monday to Friday (8:00 AM - 6:00 PM UTC)</p>
                         </div>
                     </div>
                 </div>
@@ -287,115 +287,127 @@
                 <form class="contact-form" onsubmit="handleContactSubmit(event)">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="c-name">Nom Complet *</label>
-                            <input type="text" id="c-name" required placeholder="Ex: Jean Dupont">
+                            <label for="c-name">Full Name *</label>
+                            <input type="text" id="c-name" required placeholder="e.g. John Doe">
                         </div>
                         <div class="form-group">
-                            <label for="c-email">Adresse Email *</label>
-                            <input type="email" id="c-email" required placeholder="nom@exemple.com">
+                            <label for="c-email">Email Address *</label>
+                            <input type="email" id="c-email" required placeholder="name@example.com">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="c-subject">Sujet de la demande</label>
+                        <label for="c-subject">Inquiry Subject</label>
                         <select id="c-subject">
-                            <option value="devis">Commande / Demande de devis</option>
+                            <option value="devis">Order / Quote Request</option>
                             <option value="product1">Graphene Ceramic 10H (A++)</option>
                             <option value="product2">Graphene Ultra 10H (A+++)</option>
                             <option value="product3">Diamond Shield 12H (A+++++)</option>
-                            <option value="pro">Devenir Centre Applicateur Agréé VELOX</option>
-                            <option value="autre">Autre question technique</option>
+                            <option value="pro">Become an Authorized VELOX Installer</option>
+                            <option value="autre">Other Technical Question</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="c-message">Votre Message *</label>
-                        <textarea id="c-message" rows="4" required placeholder="Précisez votre véhicule, votre surface ou vos besoins..."></textarea>
+                        <label for="c-message">Your Message *</label>
+                        <textarea id="c-message" rows="4" required placeholder="Specify your vehicle, surface, or specific needs..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-contact-submit">ENVOYER LE MESSAGE</button>
+                    <button type="submit" class="btn btn-contact-submit">SEND MESSAGE</button>
                     <div id="contactFeedback" class="contact-feedback"></div>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- النافذة المنبثقة للتفاصيل الإضافية (Modal) -->
+    <!-- Details Modal -->
     <div id="productModal" class="modal-overlay" aria-hidden="true" onclick="handleOverlayClick(event)">
         <div class="modal-container">
-            <button class="modal-close" onclick="closeProductModal()" aria-label="Fermer">&times;</button>
+            <button class="modal-close" onclick="closeProductModal()" aria-label="Close">&times;</button>
             <div class="modal-body" id="modalBody">
                 <!-- Dynamically filled by JavaScript -->
             </div>
         </div>
     </div>
 
-    <!-- نافذة إتمام الطلب الشراء (Order Checkout Modal) -->
+    <!-- Order Checkout Modal -->
     <div id="orderModal" class="modal-overlay" aria-hidden="true" onclick="handleOrderOverlayClick(event)">
         <div class="modal-container order-modal-container">
-            <button class="modal-close" onclick="closeOrderModal()" aria-label="Fermer">&times;</button>
+            <button class="modal-close" onclick="closeOrderModal()" aria-label="Close">&times;</button>
             <div class="modal-body" id="orderModalBody">
                 <!-- Dynamically filled by JavaScript -->
             </div>
         </div>
     </div>
 
-    <!-- نافذة وصل الشراء والتأكيد (Order Receipt Modal) -->
+    <!-- Order Receipt Modal -->
     <div id="orderReceiptModal" class="modal-overlay" aria-hidden="true" onclick="handleReceiptOverlayClick(event)">
         <div class="modal-container">
-            <button class="modal-close" onclick="closeReceiptModal()" aria-label="Fermer">&times;</button>
+            <button class="modal-close" onclick="closeReceiptModal()" aria-label="Close">&times;</button>
             <div class="modal-body" id="receiptModalBody">
                 <!-- Dynamically filled by JavaScript -->
             </div>
         </div>
     </div>
 
-    <!-- قسم شعار الدفع الآمن (Secure Payment Badge Section) -->
+    <!-- Admin Dashboard & Stock Alert Modal -->
+    <div id="adminModal" class="modal-overlay" aria-hidden="true" onclick="handleAdminOverlayClick(event)">
+        <div class="modal-container admin-modal-container">
+            <button class="modal-close" onclick="closeAdminModal()" aria-label="Close">&times;</button>
+            <div class="modal-body" id="adminModalBody">
+                <!-- Dynamically filled by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Secure Payment Badge Section -->
     <section class="secure-payment-section">
         <div class="secure-payment-container">
             <div class="secure-header">
                 <div class="secure-icon-main">🔒</div>
                 <div class="secure-text-group">
-                    <h3 class="secure-title">PAIEMENT 100% SÉCURISÉ &amp; GARANTI</h3>
-                    <p class="secure-subtitle">Transactions protégeés par cryptage SSL 256-bit — Protection officielle des acheteurs PayPal</p>
+                    <h3 class="secure-title">100% SECURE & GUARANTEED PAYMENT</h3>
+                    <p class="secure-subtitle">Transactions protected by 256-bit SSL encryption — Official PayPal buyer protection</p>
                 </div>
             </div>
             
             <div class="secure-badges-grid">
                 <div class="secure-badge-item">
                     <span class="badge-icon">🅿️</span>
-                    <span class="badge-label">PayPal Partenaire Officiel</span>
+                    <span class="badge-label">PayPal Official Partner</span>
                 </div>
                 <div class="secure-badge-item">
                     <span class="badge-icon">🛡️</span>
-                    <span class="badge-label">Cryptage SSL 256-Bit</span>
+                    <span class="badge-label">256-Bit SSL Encryption</span>
                 </div>
                 <div class="secure-badge-item">
                     <span class="badge-icon">💳</span>
-                    <span class="badge-label">CB / Visa / Mastercard</span>
+                    <span class="badge-label">Credit Card / Visa / Mastercard</span>
                 </div>
                 <div class="secure-badge-item">
                     <span class="badge-icon">⚡</span>
-                    <span class="badge-label">Expédition Express 24/48h</span>
+                    <span class="badge-label">24/48h Express Shipping</span>
                 </div>
                 <div class="secure-badge-item">
                     <span class="badge-icon">✅</span>
-                    <span class="badge-label">Garantie ISO9001 / MSDS</span>
+                    <span class="badge-label">ISO9001 / MSDS Guarantee</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- الفوتر المحدث -->
+    <!-- Updated Footer Section -->
     <footer class="main-footer">
         <div class="footer-brand">
-            <img src="images/logo.eps" onerror="if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/logo.svg';}else if(!this.dataset.triedPng){this.dataset.triedPng='1'; this.src='images/logo.png';}else if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/logo.jpg';}else{this.style.display='none';}" alt="VELOX" class="footer-logo-img">
+            <span class="brand-name" style="font-size: 18px; font-weight: 900; letter-spacing: 2px; color: #e2e8f0; margin-right: 8px;">VELOX</span>
             <span class="iso-badge">ISO</span> ISO9001/MSDS
         </div>
         <div class="footer-contact">
             <a href="mailto:contact@veloxcoating.com">contact@veloxcoating.com</a>
             <span class="footer-sep">|</span>
             <a href="https://www.veloxcoating.com" target="_blank">www.veloxcoating.com</a>
+            <span class="footer-sep">|</span>
+            <a href="#admin" onclick="openAdminModal(event)" style="color: #64748b; font-size: 11px; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38bdf8'" onmouseout="this.style.color='#64748b'">🔒 Admin Panel <span id="adminAlertBadgeFooter" class="admin-alert-badge" style="display: none; margin-left: 4px;">0</span></a>
         </div>
     </footer>
 
@@ -405,135 +417,135 @@
                 id: "product1",
                 price: 59,
                 paypalUrl: "https://www.paypal.com/ncp/payment/NQCDKQAW95DXW",
-                badge: "QUALITÉ A++ | 10H GRAPHÈNE",
-                title: "GRAPHÈNE CÉRAMIQUE 10H",
-                subtitle: "Graphène Céramique - Revêtement Graphène de Qualité Professionnelle",
+                badge: "QUALITY A++ | 10H GRAPHENE",
+                title: "GRAPHENE CERAMIC 10H",
+                subtitle: "Graphene Ceramic - Professional Grade Graphene Coating",
                 image: "images/product1.png",
                 alt: "VELOX Graphene Ceramic Coating Box",
                 quality: "A++",
                 capacity: "30 ML",
                 certification: "ISO9001 / MSDS",
-                contactAngle: "120° (Test Réel)",
-                durability: "3 à 5 Ans (400-600 lavages)",
-                mainIngredient: "Nanotechnologie avancée de la céramique de graphène",
-                description: "Offrez à votre peinture des niveaux de protection et de brillance sans précédent ! Exploitant la puissance de la nanotechnologie avancée céramique au graphène, il crée une première couche de défense ultra durable qui aide à protéger votre peinture des menaces les plus extrêmes. Il scelle les imperfections microscopiques et les pores de la peinture de votre voiture pour créer une surface lisse et vitreuse qui repousse l'eau et les contaminants instantanément, prévenant les taches d'eau et minimisant l'entretien à long terme.",
+                contactAngle: "120° (Real Test)",
+                durability: "3 to 5 Years (400-600 washes)",
+                mainIngredient: "Advanced graphene ceramic nanotechnology",
+                description: "Give your paint unprecedented levels of protection and shine! Harnessing the power of advanced graphene ceramic nanotechnology, it creates an ultra-durable first line of defense that helps protect your paint from extreme threats. It seals microscopic imperfections and pores in your car's paint to create a smooth, glassy surface that repels water and contaminants instantly, preventing water spots and minimizing long-term maintenance.",
                 highlights: [
-                    "Protection durable de 3 à 5 ans avec excellente répulsion de l'eau",
-                    "Nanotechnologie avancée du graphène céramique",
-                    "Meilleure résistance possible aux tourbillons et aux produits chimiques pour une qualité prosumer",
-                    "Offre une protection de la peinture avec des niveaux de brillance, durabilité et résistance aux rayures inégalés",
-                    "Forme un film combiné relativement épais par rapport aux revêtements céramiques classiques",
-                    "Considéré comme le revêtement céramique au vrai graphène le plus épais et le plus durable de l'industrie"
+                    "Durable protection for 3 to 5 years with excellent water repellency",
+                    "Advanced graphene ceramic nanotechnology",
+                    "Best possible resistance to swirl marks and chemicals for prosumer quality",
+                    "Provides paint protection with unmatched levels of gloss, durability, and scratch resistance",
+                    "Forms a relatively thick combined film compared to traditional ceramic coatings",
+                    "Considered the thickest and most durable true graphene ceramic coating in the industry"
                 ],
                 specs: [
-                    { label: "Nom du produit", value: "Graphène céramique 10H" },
-                    { label: "Qualité", value: "A++" },
-                    { label: "Capacité", value: "30 ML" },
+                    { label: "Product Name", value: "Graphene Ceramic 10H" },
+                    { label: "Quality Grade", value: "A++" },
+                    { label: "Capacity", value: "30 ML" },
                     { label: "Certification", value: "ISO9001 / MSDS" },
-                    { label: "Ingrédient principal", value: "Nanotechnologie avancée de la céramique de graphène" },
-                    { label: "Dureté", value: "Dureté 10H Pencil Hardness" },
-                    { label: "Durabilité", value: "Dernières 3 à 5 années (400 à 600 lavages)" },
-                    { label: "Angle de contact d'eau", value: "120° (test réel en laboratoire)" },
-                    { label: "Finition visuelle", value: "Finition extrêmement brillante (Miroir)" },
-                    { label: "Résistance chimique", value: "Résistance chimique avancée (pH 2 - pH 12)" },
-                    { label: "Protections", value: "Résistance à l'oxydation, corrosion, intempéries et UV" },
-                    { label: "Maintenance", value: "Auto-nettoyant, puissant rejet de la poussière et saletés" }
+                    { label: "Main Ingredient", value: "Advanced graphene ceramic nanotechnology" },
+                    { label: "Hardness", value: "10H Pencil Hardness" },
+                    { label: "Durability", value: "Lasts 3 to 5 years (400 to 600 washes)" },
+                    { label: "Water Contact Angle", value: "120° (real lab test)" },
+                    { label: "Visual Finish", value: "Extremely high gloss mirror finish" },
+                    { label: "Chemical Resistance", value: "Advanced chemical resistance (pH 2 - pH 12)" },
+                    { label: "Protections", value: "Resistance to oxidation, corrosion, weathering & UV" },
+                    { label: "Maintenance", value: "Self-cleaning, powerful dust and dirt rejection" }
                 ],
                 boxContent: [
-                    "1x Flacon Graphène Céramique 10H 30ml",
-                    "1x Bloc applicateur ergonomique en mousse haute densité",
-                    "4x Chiffons suédines microfibres ultra-doux",
-                    "1x Paire de gants de protection en nitrile",
-                    "1x Manuel d'utilisation détaillé & Certificat d'authenticité"
+                    "1x Bottle Graphene Ceramic 10H 30ml",
+                    "1x Ergonomic high-density foam applicator block",
+                    "4x Ultra-soft microfiber suede cloths",
+                    "1x Pair of protective nitrile gloves",
+                    "1x Detailed user manual & Certificate of Authenticity"
                 ]
             },
             product2: {
                 id: "product2",
                 price: 89,
                 paypalUrl: "https://www.paypal.com/ncp/payment/2PMC3M4238GUQ",
-                badge: "QUALITÉ A+++ | ULTRA 10H",
-                title: "GRAPHÈNE ULTRA 10H",
-                subtitle: "Revêtement Céramique Graphene Ultra 10H - Protection 5+ Ans",
+                badge: "QUALITY A+++ | ULTRA 10H",
+                title: "GRAPHENE ULTRA 10H",
+                subtitle: "Graphene Ultra 10H Ceramic Coating - 5+ Years Protection",
                 image: "images/product2.png",
                 alt: "Graphene Ultra 10H Bottle",
                 quality: "A+++",
                 capacity: "30 ML",
                 certification: "ISO9001 / MSDS",
-                contactAngle: "125° (Test Réel)",
-                durability: "5+ Ans (+1000 lavages)",
-                mainIngredient: "Polysiloxane & Particules Nano-Bioniques Condensées",
-                description: "Il s'agit de notre revêtement monocouche le plus récent, extrêmement hydrophobe et durable. Des particules nano-bioniques condensées, dotées de capacités de réticulation supérieures, offrent une structure 3D robuste ainsi qu'un revêtement flexible à haute brillance. Sa principale caractéristique est son super pouvoir hydrofuge et sa durée de vie de plus de 5 ans en lavage auto normal. Grâce à la structure en nid d'abeille du graphène, la combinaison de composés inorganiques est plus solide, démontrant un effet hydrophobe exceptionnel même après 1 000 lavages.",
+                contactAngle: "125° (Real Test)",
+                durability: "5+ Years (+1000 washes)",
+                mainIngredient: "Polysiloxane & Condensed Nano-Bionic Particles",
+                description: "This is our newest single-layer coating, extremely hydrophobic and durable. Condensed nano-bionic particles with superior cross-linking capabilities offer a robust 3D structure and a flexible high-gloss coating. Its main feature is its super water-repellent power and a lifespan of over 5 years under normal car washing. Thanks to graphene's honeycomb structure, the combination of inorganic compounds is stronger, demonstrating an exceptional hydrophobic effect even after 1,000 washes.",
                 highlights: [
-                    "Revêtement de verre à effet super hydrophobe - l'eau glisse instantanément",
-                    "Durée de vie certifiée de 5+ ans en lavage auto normal",
-                    "Donne un brillant luxueux et redonne à la voiture un aspect neuf permanent",
-                    "Dureté 10H supérieure protégeant votre carrosserie des rayures",
-                    "Haute transparence après cristallisation & résistance aux taches d'eau",
-                    "Propriétés ignifuges et résistance thermique jusqu'à 760°C"
+                    "Super hydrophobic effect glass coating - water slides off instantly",
+                    "Certified 5+ year lifespan under normal car wash conditions",
+                    "Delivers a luxurious shine and restores permanent new-car gloss",
+                    "Superior 10H hardness protecting your vehicle body from scratches",
+                    "High transparency after crystallization & water spot resistance",
+                    "Flame retardant properties and thermal resistance up to 760°C"
                 ],
                 specs: [
-                    { label: "Nom du produit", value: "Graphène Ultra 10H" },
-                    { label: "Qualité", value: "A+++" },
-                    { label: "Capacité", value: "30 ML" },
+                    { label: "Product Name", value: "Graphene Ultra 10H" },
+                    { label: "Quality Grade", value: "A+++" },
+                    { label: "Capacity", value: "30 ML" },
                     { label: "Certification", value: "ISO9001 / MSDS" },
-                    { label: "Matériau", value: "Polysiloxane et nano-composés bioniques" },
-                    { label: "Dureté", value: "Dureté 10H Matrix Ultra" },
-                    { label: "Durabilité", value: "Dernières 5+ années (plus de 1000 lavages)" },
-                    { label: "Angle de contact d'eau", value: "125° (test réel en laboratoire)" },
-                    { label: "Tolérance pH", value: "pH 1 - pH 12 (Haute tolérance chimique)" },
-                    { label: "Résistance à la chaleur", value: "Jusqu'à 760°C" },
-                    { label: "Propriétés spéciales", value: "Ignifuge, Anti-rayures, Anti-taches d'eau, Anti-corrosion" }
+                    { label: "Material", value: "Polysiloxane and bionic nano-compounds" },
+                    { label: "Hardness", value: "10H Matrix Ultra Hardness" },
+                    { label: "Durability", value: "Lasts 5+ years (over 1000 washes)" },
+                    { label: "Water Contact Angle", value: "125° (real lab test)" },
+                    { label: "pH Tolerance", value: "pH 1 - pH 12 (High chemical tolerance)" },
+                    { label: "Heat Resistance", value: "Up to 760°C" },
+                    { label: "Special Features", value: "Flame retardant, Anti-scratch, Water spot prevention, Anti-corrosion" }
                 ],
                 boxContent: [
-                    "1x Flacon Premium Graphène Ultra 10H 30ml verre fumé anti-UV",
-                    "1x Applicateur Pro Dual-Layer à haute réticulation",
-                    "5x Lingettes suédines de précision",
-                    "1x Certificat d'authenticité avec contrôle ISO9001/MSDS"
+                    "1x Premium Graphene Ultra 10H 30ml UV-protected smoked glass bottle",
+                    "1x Pro Dual-Layer high cross-linking applicator block",
+                    "5x Precision microfiber suede wipes",
+                    "1x Certificate of Authenticity with ISO9001/MSDS control"
                 ]
             },
             product3: {
                 id: "product3",
                 price: 119,
                 paypalUrl: "https://www.paypal.com/ncp/payment/T2L8N2WM2PVPE",
-                badge: "QUALITÉ A+++++ | DIAMOND 12H",
+                badge: "QUALITY A+++++ | DIAMOND 12H",
                 title: "DIAMOND SHIELD 12H",
-                subtitle: "Revêtement Céramique Diamond Shield 12H - Spécial Peintures, PPF & Vinyles",
+                subtitle: "Diamond Shield 12H Ceramic Coating - Special for Paints, PPF & Vinyl Wraps",
                 image: "images/product3.png",
                 alt: "Diamond Shield 12H Banner",
                 quality: "A+++++",
                 capacity: "30 ML",
                 certification: "ISO9001 / MSDS",
-                contactAngle: "137° (Test Réel)",
-                durability: "5 à 7 Ans",
-                mainIngredient: "Formule Brevetée CARLAYER Diamond Nano-Hardness",
-                description: "Diamond Shield 12H se concentre sur la recherche et le développement de revêtements de très haute qualité. La série de revêtements céramiques CARLAYER est en cours de dépôt de brevet. Spécialement formulée pour les peintures brillantes, mates et les films vinyles (coverings) de toute texture, elle compense le manque d'imperméabilité et de brillance des films tout en offrant un éclat éternel et un nettoyage ultra facile.",
+                contactAngle: "137° (Real Test)",
+                durability: "5 to 7 Years",
+                mainIngredient: "Patented CARLAYER Diamond Nano-Hardness Formula",
+                description: "Diamond Shield 12H focuses on research and development of ultra-high quality coatings. The CARLAYER ceramic coating series is patent pending. Specially formulated for gloss paints, matte finishes, and vinyl films (wraps) of any texture, it compensates for the lack of waterproofing and shine on wraps while providing everlasting radiance and ultra-easy cleaning.",
                 highlights: [
-                    "Formule professionnelle avancée spéciale pour films vinyles (PPF/Covering)",
-                    "Convient aux finitions de carrosseries brillantes et mates",
-                    "Durabilité exceptionnelle jusqu'à 5 à 7 ans",
-                    "Niveaux de brillance, de durabilité et d'anti-rayures jamais égalés",
-                    "Angle de contact révolutionnaire de 137° pour un écoulement d'eau instantané",
-                    "Haute transparence après cristallisation, anti-rayures, ignifuge et prévention des tourbillons"
+                    "Advanced professional formula specifically for vinyl wraps and PPF",
+                    "Suitable for gloss and matte car body finishes",
+                    "Exceptional durability up to 5 to 7 years",
+                    "Unmatched levels of shine, durability, and anti-scratch protection",
+                    "Revolutionary 137° contact angle for instant water runoff",
+                    "High transparency after crystallization, scratch-resistant, flame retardant, and swirl prevention"
                 ],
                 specs: [
-                    { label: "Nom du produit", value: "Revêtement céramique Diamond Shield" },
-                    { label: "Qualité", value: "A+++++" },
-                    { label: "Capacité", value: "30 ML" },
+                    { label: "Product Name", value: "Diamond Shield Ceramic Coating" },
+                    { label: "Quality Grade", value: "A+++++" },
+                    { label: "Capacity", value: "30 ML" },
                     { label: "Certification", value: "ISO9001 / MSDS" },
-                    { label: "Compatibilité", value: "Peinture brillante, Peinture mate & Films Vinyles/PPF" },
-                    { label: "Dureté", value: "Dureté 12H Diamond Nano-Hardness" },
-                    { label: "Durabilité", value: "5 à 7 années de protection" },
-                    { label: "Angle de contact d'eau", value: "137° (test réel le plus élevé)" },
-                    { label: "Résistance chimique", value: "pH 2 - pH 12" },
-                    { label: "Finition", value: "Haute brillance éternelle / respect des mats" },
-                    { label: "Caractéristiques", value: "Anti-rayures, Ignifuge, Prévention des tourbillons, Ultra hydrophobe" }
+                    { label: "Compatibility", value: "Gloss paint, Matte paint & Vinyl / PPF films" },
+                    { label: "Hardness", value: "12H Diamond Nano-Hardness" },
+                    { label: "Durability", value: "5 to 7 years of protection" },
+                    { label: "Water Contact Angle", value: "137° (highest real test angle)" },
+                    { label: "Chemical Resistance", value: "pH 2 - pH 12" },
+                    { label: "Finish", value: "Eternal high gloss / preserves original matte" },
+                    { label: "Features", value: "Scratch-resistant, Flame retardant, Swirl prevention, Ultra hydrophobic" }
                 ],
                 boxContent: [
-                    "1x Flacon DIAMOND SHIELD 12H 30ml",
-                    "1x Solution de préparation de surface 50ml",
-                    "1x Bloc applicateur Pro Velvet haute densité",
-                    "6x Microfibres suédines de finition professionnelle",
-                    "1x Autocollant holographique officiel de certification"
+                    "1x DIAMOND SHIELD 12H 30ml bottle",
+                    "1x Surface preparation solution 50ml",
+                    "1x Pro Velvet high-density applicator block",
+                    "6x Professional finish microfiber suede wipes",
+                    "1x Official holographic certification sticker"
                 ]
             }
         };
@@ -546,10 +558,10 @@
             modalBody.innerHTML = `
                 <!-- Modal Tabs Header -->
                 <div class="modal-tabs-header">
-                    <button class="modal-tab-btn active" onclick="switchModalTab('info', this)">📋 FICHE PRODUIT</button>
-                    <button class="modal-tab-btn" onclick="switchModalTab('guide', this)">📘 GUIDE D'APPLICATION</button>
-                    <button class="modal-tab-btn" onclick="switchModalTab('faq', this)">❓ QUESTIONS (FAQ)</button>
-                    <button class="modal-tab-btn" onclick="switchModalTab('reviews', this)">⭐ AVIS EXPERTS</button>
+                    <button class="modal-tab-btn active" onclick="switchModalTab('info', this)">📋 PRODUCT SHEET</button>
+                    <button class="modal-tab-btn" onclick="switchModalTab('guide', this)">📘 APPLICATION GUIDE</button>
+                    <button class="modal-tab-btn" onclick="switchModalTab('faq', this)">❓ FAQ</button>
+                    <button class="modal-tab-btn" onclick="switchModalTab('reviews', this)">⭐ EXPERT REVIEWS</button>
                 </div>
 
                 <!-- TAB 1: Product Specific Info -->
@@ -557,15 +569,20 @@
                     <div class="modal-grid">
                         <div class="modal-image-col">
                             <div class="modal-badge">${data.badge}</div>
-                            <img src="${data.image}" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/' + data.id + '.jpg';}else if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/' + data.id + '.svg';}else{this.onerror=null; this.style.display='none';}" alt="${data.alt}" class="modal-img">
+                            <div class="modal-gallery-main">
+                                <img id="modalMainImg" src="${data.image}" onerror="if(!this.dataset.triedJpg){this.dataset.triedJpg='1'; this.src='images/' + data.id + '.jpg';}else if(!this.dataset.triedSvg){this.dataset.triedSvg='1'; this.src='images/' + data.id + '.svg';}else{this.onerror=null; this.style.display='none';}" alt="${data.alt}" class="modal-img">
+                            </div>
+                            <!-- Miniatures Gallery Strip for extra images -->
+                            <div class="modal-gallery-thumbs" id="modalGalleryThumbs_${data.id}"></div>
+
                             <div class="modal-quick-stats">
                                 <div class="m-stat">
                                     <span class="m-stat-val">${data.quality}</span>
-                                    <span class="m-stat-lbl">Grade Qualité</span>
+                                    <span class="m-stat-lbl">Quality Grade</span>
                                 </div>
                                 <div class="m-stat">
                                     <span class="m-stat-val">${data.capacity}</span>
-                                    <span class="m-stat-lbl">Capacité</span>
+                                    <span class="m-stat-lbl">Capacity</span>
                                 </div>
                                 <div class="m-stat">
                                     <span class="m-stat-val">ISO/MSDS</span>
@@ -573,9 +590,9 @@
                                 </div>
                             </div>
                             <div class="modal-lab-highlight">
-                                <div class="lab-title">🧪 RESULTAT DE TEST RÉEL</div>
-                                <div class="lab-stat">Angle Hydrophobe: <strong>${data.contactAngle}</strong></div>
-                                <div class="lab-stat">Durabilité: <strong>${data.durability}</strong></div>
+                                <div class="lab-title">🧪 REAL LAB TEST RESULT</div>
+                                <div class="lab-stat">Hydrophobic Angle: <strong>${data.contactAngle}</strong></div>
+                                <div class="lab-stat">Durability: <strong>${data.durability}</strong></div>
                             </div>
                         </div>
 
@@ -584,88 +601,88 @@
                             <h3 class="modal-subtitle">${data.subtitle}</h3>
                             <p class="modal-desc">${data.description}</p>
 
-                            <div class="modal-section-title">☑️ POINTS FORTS & AVANTAGES EXCLUSIFS</div>
+                            <div class="modal-section-title">☑️ HIGHLIGHTS & EXCLUSIVE BENEFITS</div>
                             <ul class="modal-features-list">
                                 ${data.highlights.map(f => `<li>${f}</li>`).join('')}
                             </ul>
 
-                            <div class="modal-section-title">📊 FICHE TECHNIQUE COMPLÈTE</div>
+                            <div class="modal-section-title">📊 FULL TECHNICAL SPECIFICATIONS</div>
                             <table class="modal-specs-table">
                                 <tbody>
                                     ${data.specs.map(s => `<tr><td>${s.label}</td><td><strong>${s.value}</strong></td></tr>`).join('')}
                                 </tbody>
                             </table>
 
-                            <div class="modal-section-title">📦 CONTENU DU PACK</div>
+                            <div class="modal-section-title">📦 INCLUDED IN THE BOX</div>
                             <ul class="modal-box-list">
                                 ${data.boxContent.map(item => `<li>${item}</li>`).join('')}
                             </ul>
 
                             <div class="modal-actions">
-                                <button class="btn btn-modal-primary" onclick="closeProductModal(); openOrderModal('${data.id}');">🛒 PASSER COMMANDE DIRECTE ($${data.price})</button>
-                                <button class="btn btn-modal-secondary" onclick="closeProductModal()">FERMER</button>
+                                <button class="btn btn-modal-primary" onclick="closeProductModal(); openOrderModal('${data.id}');">🛒 PLACE DIRECT ORDER ($${data.price})</button>
+                                <button class="btn btn-modal-secondary" onclick="closeProductModal()">CLOSE</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- TAB 2: Shared Guide Application Pas à Pas -->
+                <!-- TAB 2: Shared Step-by-step Application Guide -->
                 <div id="tab-guide" class="modal-tab-pane" style="padding-top: 20px;">
                     <div class="modal-guide-header">
-                        <div class="nl-subtitle">PROTOCOLE D'APPLICATION EXPERT</div>
-                        <h3 class="modal-guide-title">GUIDE D'APPLICATION PAS À PAS</h3>
-                        <p class="modal-guide-sub">Suivez ces étapes pour une accroche nanométrique optimale et une durabilité maximale</p>
+                        <div class="nl-subtitle">EXPERT APPLICATION PROTOCOL</div>
+                        <h3 class="modal-guide-title">STEP-BY-STEP APPLICATION GUIDE</h3>
+                        <p class="modal-guide-sub">Follow these steps for optimal nanometric bonding and maximum durability</p>
                     </div>
 
                     <div class="guide-steps-grid">
                         <div class="guide-step-card">
-                            <span class="step-number">ÉTAPE 01</span>
-                            <span class="step-time">⏱️ 1 - 3 Heures</span>
-                            <div class="step-card-title">PRÉPARATION DE SURFACE</div>
-                            <p class="step-card-desc">La clé d'une liaison nanométrique. La céramique a besoin d'une surface parfaitement nue pour s'accrocher chimiquement au vernis. Tout résidu de cire ruinera la longévité.</p>
+                            <span class="step-number">STEP 01</span>
+                            <span class="step-time">⏱️ 1 - 3 Hours</span>
+                            <div class="step-card-title">SURFACE PREPARATION</div>
+                            <p class="step-card-desc">The key to nanometric bonding. Ceramic requires a completely bare surface to chemically bond with clear coat. Any wax residue will ruin longevity.</p>
                             <ul class="step-list">
-                                <li>Laver minutieusement avec shampoing dégraissant pH neutre</li>
-                                <li>Passer la barre d'argile (Clay bar) pour décontaminer</li>
-                                <li>Polissage de correction des micro-rayures et tourbillons</li>
-                                <li>Dégraissage complet à la solution Isopropylique (IPA Cleaner)</li>
+                                <li>Thoroughly wash with pH-neutral degreasing shampoo</li>
+                                <li>Pass clay bar to decontaminate surface</li>
+                                <li>Paint correction polishing to remove micro-scratches and swirls</li>
+                                <li>Complete degreasing with Isopropyl solution (IPA Cleaner)</li>
                             </ul>
                         </div>
 
                         <div class="guide-step-card">
-                            <span class="step-number">ÉTAPE 02</span>
-                            <span class="step-time">⏱️ 30 - 60 Min</span>
-                            <div class="step-card-title">APPLICATION DU TRAITEMENT</div>
-                            <p class="step-card-desc">Application méthodique par sections réduites pour assurer un film homogène.</p>
+                            <span class="step-number">STEP 02</span>
+                            <span class="step-time">⏱️ 30 - 60 Mins</span>
+                            <div class="step-card-title">COATING APPLICATION</div>
+                            <p class="step-card-desc">Methodical application in small sections to ensure an even film.</p>
                             <ul class="step-list">
-                                <li>Déposer 8 à 10 gouttes sur la suédine entourant le bloc mousse</li>
-                                <li>Appliquer en mouvements croisés (damier horizontal & vertical)</li>
-                                <li>Travailler sur des zones de 50x50 cm à la fois</li>
-                                <li>Maintenir une pression uniforme sans trop appuyer</li>
+                                <li>Apply 8 to 10 drops on suede wrapped around foam block</li>
+                                <li>Apply in cross-hatch pattern (horizontal & vertical grid)</li>
+                                <li>Work on 50x50 cm sections at a time</li>
+                                <li>Maintain even pressure without pressing too hard</li>
                             </ul>
                         </div>
 
                         <div class="guide-step-card">
-                            <span class="step-number">ÉTAPE 03</span>
-                            <span class="step-time">⏱️ 1 - 3 Min Flash</span>
-                            <div class="step-card-title">ESSUYAGE & NIVELLEMENT</div>
-                            <p class="step-card-desc">Le temps de flash dépend de la température ambiante (15°C - 25°C idéaux).</p>
+                            <span class="step-number">STEP 03</span>
+                            <span class="step-time">⏱️ 1 - 3 Mins Flash</span>
+                            <div class="step-card-title">WIPE OFF & LEVELING</div>
+                            <p class="step-card-desc">Flash time depends on ambient temperature (15°C - 25°C ideal).</p>
                             <ul class="step-list">
-                                <li>Observer l'apparition de l'effet arc-en-ciel (flash)</li>
-                                <li>Essuyer avec une 1ère microfibre propre à poils courts</li>
-                                <li>Lustrer avec une 2ème suédine haute densité sans laisser de trace</li>
-                                <li>Contrôler sous lampe d'inspection pour éviter tout "high spot"</li>
+                                <li>Observe rainbow effect (flash)</li>
+                                <li>Wipe off with 1st clean short-nap microfiber towel</li>
+                                <li>Buff with 2nd high-density suede cloth until streak-free</li>
+                                <li>Check under inspection light to avoid high spots</li>
                             </ul>
                         </div>
 
                         <div class="guide-step-card">
-                            <span class="step-number">ÉTAPE 04</span>
-                            <span class="step-time">⏱️ 24h / 7 Jours</span>
-                            <div class="step-card-title">PHASE DE SÉCHAGE & CURAGE</div>
-                            <p class="step-card-desc">Cristallisation totale du réseau moléculaire 3D.</p>
+                            <span class="step-number">STEP 04</span>
+                            <span class="step-time">⏱️ 24h / 7 Days</span>
+                            <div class="step-card-title">CURING & DRYING PHASE</div>
+                            <p class="step-card-desc">Complete crystallization of the 3D molecular matrix.</p>
                             <ul class="step-list">
-                                <li>Garder le véhicule au sec à l'abri de l'eau pendant 24h minimum</li>
-                                <li>Ne pas laver le véhicule au shampoing pendant 7 jours</li>
-                                <li>Séchage accéléré possible sous lampe infrarouge (60°C pendant 15 min)</li>
+                                <li>Keep vehicle dry away from water for 24h minimum</li>
+                                <li>Do not wash vehicle with shampoo for 7 days</li>
+                                <li>Accelerated curing possible under IR lamp (60°C for 15 mins)</li>
                             </ul>
                         </div>
                     </div>
@@ -674,37 +691,37 @@
                 <!-- TAB 3: Shared FAQ -->
                 <div id="tab-faq" class="modal-tab-pane" style="padding-top: 20px;">
                     <div class="modal-guide-header">
-                        <div class="nl-subtitle">CENTRE D'ASSISTANCE VELOX</div>
-                        <h3 class="modal-guide-title">QUESTIONS FRÉQUENTES (FAQ)</h3>
-                        <p class="modal-guide-sub">Réponses aux questions les plus posées par nos utilisateurs et applicateurs agréés</p>
+                        <div class="nl-subtitle">VELOX SUPPORT CENTER</div>
+                        <h3 class="modal-guide-title">FREQUENTLY ASKED QUESTIONS (FAQ)</h3>
+                        <p class="modal-guide-sub">Answers to the most common questions from our users and authorized installers</p>
                     </div>
 
                     <div class="modal-faq-container">
                         <div class="faq-item" onclick="toggleFaq(this)">
-                            <button class="faq-question">QUELLE EST LA DIFFÉRENCE ENTRE UN TRAITEMENT CÉRAMIQUE SIO2 ET LE GRAPHÈNE VELOX ?</button>
+                            <button class="faq-question">WHAT IS THE DIFFERENCE BETWEEN SIO2 CERAMIC COATING AND VELOX GRAPHENE?</button>
                             <div class="faq-answer">
-                                Le traitement au graphène offre une meilleure dissipation thermique et une résistance accrue aux taches d'eau alcalines (water spots). Grâce à sa structure nanométrique en nid d'abeille, il augmente l'angle hydrophobe (jusqu'à 137°) et offre une durabilité jusqu'à 2 fois supérieure aux céramiques SiO2 traditionnelles.
+                                Graphene coating provides superior thermal dissipation and higher resistance to alkaline water spots. Thanks to its nanometric honeycomb structure, it increases the hydrophobic angle (up to 137°) and delivers up to 2x greater durability than traditional SiO2 ceramics.
                             </div>
                         </div>
 
                         <div class="faq-item" onclick="toggleFaq(this)">
-                            <button class="faq-question">PUIS-JE APPLIQUER LE REVÊTEMENT VELOX SUR UN FILM PROTECTEUR PPF OU UN COVERING ?</button>
+                            <button class="faq-question">CAN I APPLY VELOX COATING ON PPF PROTECTION FILM OR VINYL WRAPS?</button>
                             <div class="faq-answer">
-                                Absolument ! Notre formule Diamond Shield 12H est spécifiquement élaborée pour les carrosseries avec films PPF et vinyles (finitions mates ou brillantes). Elle s'agrippe fortement sans créer de surbrillance indésirable sur les mats et protège le film contre le jaunissement UV.
+                                Absolutely! Our Diamond Shield 12H formula is specifically engineered for car bodies with PPF films and vinyl wraps (matte or gloss finishes). It bonds strongly without causing unwanted gloss on matte surfaces and protects the film against UV yellowing.
                             </div>
                         </div>
 
                         <div class="faq-item" onclick="toggleFaq(this)">
-                            <button class="faq-question">COMBIEN DE COUCHES DE REVÊTEMENT DOIS-JE APPLIQUER ?</button>
+                            <button class="faq-question">HOW MANY COATS OF COATING SHOULD I APPLY?</button>
                             <div class="faq-answer">
-                                Une seule couche suffit pour obtenir une protection maximale et des performances hydrophobes exceptionnelles. Vous pouvez toutefois appliquer une 2ème couche 1 à 2 heures après la première pour augmenter la profondeur du brillant et la résistance mécanique.
+                                A single layer is sufficient for maximum protection and outstanding hydrophobic performance. However, you may apply a second coat 1 to 2 hours after the first to enhance gloss depth and mechanical resistance.
                             </div>
                         </div>
 
                         <div class="faq-item" onclick="toggleFaq(this)">
-                            <button class="faq-question">COMMENT ENTRETENIR MA CARROSSERIE APRÈS L'APPLICATION DU TRAITEMENT ?</button>
+                            <button class="faq-question">HOW DO I MAINTAIN MY VEHICLE BODY AFTER APPLYING THE COATING?</button>
                             <div class="faq-answer">
-                                Utilisez uniquement un shampoing automobile doux à pH neutre, sans cires ni additifs synthétiques. Évitez impérativement les stations de lavage automatique à rouleaux. La surface lisse repousse la saleté, un simple rinçage suffit la plupart du temps.
+                                Use only a gentle, pH-neutral automotive shampoo without synthetic waxes or additives. Avoid automatic drive-through roller car washes. The slick surface repels dirt, making a simple rinse sufficient most of the time.
                             </div>
                         </div>
                     </div>
@@ -713,9 +730,9 @@
                 <!-- TAB 4: Shared Reviews -->
                 <div id="tab-reviews" class="modal-tab-pane" style="padding-top: 20px;">
                     <div class="modal-guide-header">
-                        <div class="nl-subtitle">RETOUR D'EXPÉRIENCE PROFESSIONNEL</div>
-                        <h3 class="modal-guide-title">TÉMOIGNAGES DE PROFESSIONNELS</h3>
-                        <p class="modal-guide-sub">Découvrez l'avis des detailers et centres esthétiques partenaires</p>
+                        <div class="nl-subtitle">PROFESSIONAL FEEDBACK</div>
+                        <h3 class="modal-guide-title">TESTIMONIALS FROM PROFESSIONALS</h3>
+                        <p class="modal-guide-sub">Discover reviews from our partner detailers and aesthetic centers</p>
                     </div>
 
                     <div class="reviews-grid">
@@ -723,13 +740,13 @@
                             <div class="review-header">
                                 <div>
                                     <span class="review-author">ALEXANDRE G.</span>
-                                    <span class="review-role">Fondateur de Prestige Detail</span>
-                                    <span class="review-vehicle">Porsche 911 GT3 RS (Covering Mat)</span>
+                                    <span class="review-role">Founder of Prestige Detail</span>
+                                    <span class="review-vehicle">Porsche 911 GT3 RS (Matte Wrap)</span>
                                 </div>
                                 <div class="review-stars">★★★★★</div>
                             </div>
                             <div class="review-quote">
-                                "Le Diamond Shield 12H est une révolution pour les films mates. Il maintient l'aspect mat satiné d'origine sans aucun blanchiment ni effet brillant indésirable tout en offrant un perlage d'eau digne d'une supercar."
+                                "Diamond Shield 12H is a game changer for matte wraps. It maintains the original satin-matte look without any whitening or unwanted gloss while delivering water beading worthy of a supercar."
                             </div>
                         </div>
 
@@ -737,13 +754,13 @@
                             <div class="review-header">
                                 <div>
                                     <span class="review-author">MARC-ANTOINE L.</span>
-                                    <span class="review-role">Propriétaire d'un Centre Esthétique</span>
-                                    <span class="review-vehicle">Tesla Model S Plaid (Noir Obsidian)</span>
+                                    <span class="review-role">Aesthetic Center Owner</span>
+                                    <span class="review-vehicle">Tesla Model S Plaid (Obsidian Black)</span>
                                 </div>
                                 <div class="review-stars">★★★★★</div>
                             </div>
                             <div class="review-quote">
-                                "L'application du Graphene Ultra est d'une facilité déconcertante par rapport aux anciennes formulations. L'effet arc-en-ciel après pose est très visible, l'essuyage se fait sans forcer et le fini brillant est incroyablement profond."
+                                "Applying Graphene Ultra is surprisingly easy compared to older formulas. The rainbow effect after application is clearly visible, wiping off requires no effort, and the glossy finish is incredibly deep."
                             </div>
                         </div>
 
@@ -751,13 +768,13 @@
                             <div class="review-header">
                                 <div>
                                     <span class="review-author">JULIEN M.</span>
-                                    <span class="review-role">Detailer Certifié Master</span>
+                                    <span class="review-role">Master Certified Detailer</span>
                                     <span class="review-vehicle">Ferrari F8 Tributo</span>
                                 </div>
                                 <div class="review-stars">★★★★★</div>
                             </div>
                             <div class="review-quote">
-                                "Après 18 mois et 20 000 km, le perlage sur la carrosserie est comme au premier jour. Velox repousse l'eau et la poussière de manière spectaculaire."
+                                "After 18 months and 20,000 km, the water beading on the paint is as good as day one. Velox repels water and dust spectacularly."
                             </div>
                         </div>
                     </div>
@@ -765,12 +782,12 @@
 
                 <!-- Shared Newsletter Box at Modal Bottom -->
                 <div class="modal-newsletter">
-                    <div class="nl-subtitle">RESTAY INFORMÉ</div>
-                    <h4 class="nl-title">NEWSLETTER PRIVÉE VELOX</h4>
-                    <p class="nl-desc">Inscrivez-vous pour recevoir nos offres exclusives, guides de detailing avancés et actualités technologiques.</p>
-                    <form class="nl-form" onsubmit="event.preventDefault(); alert('Merci pour votre inscription à la Newsletter Privée VELOX !');">
-                        <input type="email" placeholder="votre.email@adresse.com" required class="nl-input">
-                        <button type="submit" class="nl-btn">S'INSCRIRE</button>
+                    <div class="nl-subtitle">STAY INFORMED</div>
+                    <h4 class="nl-title">VELOX PRIVATE NEWSLETTER</h4>
+                    <p class="nl-desc">Subscribe to receive our exclusive offers, advanced detailing guides, and technology updates.</p>
+                    <form class="nl-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to the VELOX Private Newsletter!');">
+                        <input type="email" placeholder="your.email@address.com" required class="nl-input">
+                        <button type="submit" class="nl-btn">SUBSCRIBE</button>
                     </form>
                 </div>
             `;
@@ -779,6 +796,88 @@
             modal.classList.add('active');
             modal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
+
+            // Initialize gallery for additional product images in detail view
+            initProductGallery(productId);
+        }
+
+        // --- Function to dynamically discover and populate product gallery thumbnails ---
+        function initProductGallery(productId) {
+            const thumbsContainer = document.getElementById('modalGalleryThumbs_' + productId);
+            const mainImg = document.getElementById('modalMainImg');
+            if (!thumbsContainer || !mainImg) return;
+
+            thumbsContainer.innerHTML = '';
+            const addedUrls = new Set();
+
+            function addThumb(src, isFirst) {
+                if (!src || addedUrls.has(src)) return;
+                addedUrls.add(src);
+
+                const thumbImg = document.createElement('img');
+                thumbImg.src = src;
+                thumbImg.alt = productId + ' gallery photo';
+                thumbImg.className = 'modal-thumb' + (isFirst ? ' active' : '');
+
+                thumbImg.onclick = function() {
+                    mainImg.src = src;
+                    mainImg.style.display = 'block';
+                    const currentThumbs = thumbsContainer.querySelectorAll('.modal-thumb');
+                    currentThumbs.forEach(t => t.classList.remove('active'));
+                    thumbImg.classList.add('active');
+                };
+
+                thumbsContainer.appendChild(thumbImg);
+            }
+
+            // Add primary product image as first thumbnail
+            if (mainImg.src) {
+                addThumb(mainImg.src, true);
+            }
+
+            // Fallback handler if mainImg onerror changes the src
+            const origOnError = mainImg.onerror;
+            mainImg.onerror = function() {
+                if (origOnError) origOnError.call(this);
+                if (this.src && this.style.display !== 'none') {
+                    const firstThumb = thumbsContainer.querySelector('.modal-thumb');
+                    if (firstThumb) firstThumb.src = this.src;
+                }
+            };
+
+            // Test additional candidate image suffixes (_2, _3, _4, _5, _6, _7, _8)
+            const suffixes = ['_2', '-2', '_3', '-3', '_4', '-4', '_5', '-5', '_6', '-6', '_7', '_8'];
+            suffixes.forEach(sfx => {
+                tryLoadGalleryImage(productId, sfx, function(validSrc) {
+                    if (validSrc) {
+                        addThumb(validSrc, false);
+                    }
+                });
+            });
+        }
+
+        function tryLoadGalleryImage(productId, suffix, callback) {
+            const exts = ['.png', '.jpg', '.jpeg', '.svg', '.webp'];
+            let idx = 0;
+
+            function checkNext() {
+                if (idx >= exts.length) {
+                    callback(null);
+                    return;
+                }
+                const testUrl = 'images/' + productId + suffix + exts[idx];
+                const img = new Image();
+                img.onload = function() {
+                    callback(testUrl);
+                };
+                img.onerror = function() {
+                    idx++;
+                    checkNext();
+                };
+                img.src = testUrl;
+            }
+
+            checkNext();
         }
 
         function switchModalTab(tabName, btnElement) {
@@ -835,7 +934,7 @@
             
             feedback.style.display = 'block';
             feedback.className = 'contact-feedback success';
-            feedback.innerHTML = `✅ Merci ${name} ! Votre message a été transmis avec succès à notre équipe technique. Nous vous répondrons sous 24 heures.`;
+            feedback.innerHTML = `✅ Thank you ${name}! Your message has been successfully transmitted to our technical team. We will respond within 24 hours.`;
             
             e.target.reset();
             setTimeout(() => {
@@ -894,9 +993,9 @@
             const orderModalBody = document.getElementById('orderModalBody');
             orderModalBody.innerHTML = `
                 <div class="modal-guide-header" style="text-align: left; margin-bottom: 20px;">
-                    <div class="nl-subtitle">COMMANDE DIRECTE SÉCURISÉE VELOX</div>
-                    <h2 class="modal-title">VALIDER VOTRE COMMANDE</h2>
-                    <p class="modal-guide-sub">Expédition express sous 24-48h avec garantie d'authenticité ISO9001</p>
+                    <div class="nl-subtitle">SECURE VELOX DIRECT ORDER</div>
+                    <h2 class="modal-title">CONFIRM YOUR ORDER</h2>
+                    <p class="modal-guide-sub">Express shipping within 24-48h with ISO9001 authenticity guarantee</p>
                 </div>
 
                 <div class="order-grid">
@@ -913,17 +1012,17 @@
 
                         <!-- Product Selector Dropdown -->
                         <div class="form-group">
-                            <label for="orderProductSelect">CHOIX DU PRODUIT :</label>
+                            <label for="orderProductSelect">SELECT PRODUCT:</label>
                             <select id="orderProductSelect" onchange="changeOrderProduct(this.value)">
-                                <option value="product1" ${currentOrder.productId === 'product1' ? 'selected' : ''}>Graphène Céramique 10H (A++) - $59.00</option>
-                                <option value="product2" ${currentOrder.productId === 'product2' ? 'selected' : ''}>Graphène Ultra 10H (A+++) - $89.00</option>
+                                <option value="product1" ${currentOrder.productId === 'product1' ? 'selected' : ''}>Graphene Ceramic 10H (A++) - $59.00</option>
+                                <option value="product2" ${currentOrder.productId === 'product2' ? 'selected' : ''}>Graphene Ultra 10H (A+++) - $89.00</option>
                                 <option value="product3" ${currentOrder.productId === 'product3' ? 'selected' : ''}>Diamond Shield 12H (A+++++) - $119.00</option>
                             </select>
                         </div>
 
                         <!-- Quantity Selector -->
                         <div class="form-group">
-                            <label>QUANTITÉ :</label>
+                            <label>QUANTITY:</label>
                             <div class="qty-counter">
                                 <button type="button" class="qty-btn" onclick="changeOrderQty(-1)">-</button>
                                 <span class="qty-val">${currentOrder.quantity}</span>
@@ -934,15 +1033,15 @@
                         <!-- Total Price Breakdown -->
                         <div class="price-breakdown">
                             <div class="price-row">
-                                <span>Sous-total (${currentOrder.quantity}x ${product.title}) :</span>
+                                <span>Subtotal (${currentOrder.quantity}x ${product.title}):</span>
                                 <span>$${finalTotal}.00</span>
                             </div>
                             <div class="price-row">
-                                <span>Livraison Express :</span>
-                                <span style="color: #10b981; font-weight: bold;">GRATUITE ($0.00)</span>
+                                <span>Express Shipping:</span>
+                                <span style="color: #10b981; font-weight: bold;">FREE ($0.00)</span>
                             </div>
                             <div class="price-row total-row">
-                                <span>TOTAL À PAYER :</span>
+                                <span>TOTAL TO PAY:</span>
                                 <span class="total-amount">$${finalTotal}.00</span>
                             </div>
                         </div>
@@ -950,46 +1049,134 @@
 
                     <!-- Right: Customer Form & Payment -->
                     <form class="contact-form" onsubmit="submitOrder(event)">
-                        <h3 style="font-family: 'Orbitron', sans-serif; font-size: 13px; color: #fff; margin-bottom: 10px;">INFORMATIONS DE LIVRAISON</h3>
+                        <h3 style="font-family: 'Orbitron', sans-serif; font-size: 13px; color: #fff; margin-bottom: 10px;">SHIPPING INFORMATION</h3>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="o-name">Nom & Prénom *</label>
-                                <input type="text" id="o-name" required placeholder="Ex: Alex Martin">
+                                <label for="o-name">Full Name *</label>
+                                <input type="text" id="o-name" required placeholder="e.g. Alex Martin">
                             </div>
                             <div class="form-group">
-                                <label for="o-phone">Téléphone *</label>
-                                <input type="tel" id="o-phone" required placeholder="+33 6 12 34 56 78">
+                                <label for="o-phone">Phone Number *</label>
+                                <input type="tel" id="o-phone" required placeholder="+1 555 123 4567">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="o-email">Email de confirmation *</label>
-                            <input type="email" id="o-email" required placeholder="votre.email@exemple.com">
+                            <label for="o-email">Confirmation Email *</label>
+                            <input type="email" id="o-email" required placeholder="your.email@example.com">
                         </div>
 
                         <div class="form-group">
-                            <label for="o-address">Adresse de livraison *</label>
-                            <input type="text" id="o-address" required placeholder="Numéro, Rue, Bâtiment...">
+                            <label for="o-address">Shipping Address *</label>
+                            <input type="text" id="o-address" required placeholder="Street Number, Name, Apt/Suite...">
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="o-zip">Code Postal *</label>
-                                <input type="text" id="o-zip" required placeholder="75008">
+                                <label for="o-zip">ZIP / Postal Code *</label>
+                                <input type="text" id="o-zip" required placeholder="10001">
                             </div>
                             <div class="form-group">
-                                <label for="o-city">Ville *</label>
-                                <input type="text" id="o-city" required placeholder="Paris">
+                                <label for="o-city">City *</label>
+                                <input type="text" id="o-city" required placeholder="New York">
                             </div>
                             <div class="form-group">
-                                <label for="o-country">Pays *</label>
+                                <label for="o-country">Country *</label>
                                 <select id="o-country">
-                                    <option value="France">France</option>
-                                    <option value="Belgique">Belgique</option>
-                                    <option value="Suisse">Suisse</option>
-                                    <option value="Luxembourg">Luxembourg</option>
-                                    <option value="Autre">Autre Europe / International</option>
+                                    <optgroup label="--- Main countries ---">
+                                        <option value="United States" selected>United States</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="France">France</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="Belgium">Belgium</option>
+                                        <option value="Switzerland">Switzerland</option>
+                                        <option value="United Arab Emirates">United Arab Emirates</option>
+                                        <option value="Saudi Arabia">Saudi Arabia</option>
+                                        <option value="Morocco">Morocco</option>
+                                    </optgroup>
+                                    <optgroup label="--- All countries worldwide ---">
+                                        <option value="Afghanistan">Afghanistan</option>
+                                        <option value="Albania">Albania</option>
+                                        <option value="Algeria">Algeria</option>
+                                        <option value="Andorra">Andorra</option>
+                                        <option value="Angola">Angola</option>
+                                        <option value="Argentina">Argentina</option>
+                                        <option value="Armenia">Armenia</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Austria">Austria</option>
+                                        <option value="Azerbaijan">Azerbaijan</option>
+                                        <option value="Bahamas">Bahamas</option>
+                                        <option value="Bahrain">Bahrain</option>
+                                        <option value="Bangladesh">Bangladesh</option>
+                                        <option value="Belgium">Belgium</option>
+                                        <option value="Brazil">Brazil</option>
+                                        <option value="Bulgaria">Bulgaria</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Chile">Chile</option>
+                                        <option value="China">China</option>
+                                        <option value="Colombia">Colombia</option>
+                                        <option value="Croatia">Croatia</option>
+                                        <option value="Cyprus">Cyprus</option>
+                                        <option value="Czech Republic">Czech Republic</option>
+                                        <option value="Denmark">Denmark</option>
+                                        <option value="Egypt">Egypt</option>
+                                        <option value="Estonia">Estonia</option>
+                                        <option value="Finland">Finland</option>
+                                        <option value="France">France</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="Greece">Greece</option>
+                                        <option value="Hong Kong">Hong Kong</option>
+                                        <option value="Hungary">Hungary</option>
+                                        <option value="Iceland">Iceland</option>
+                                        <option value="India">India</option>
+                                        <option value="Indonesia">Indonesia</option>
+                                        <option value="Ireland">Ireland</option>
+                                        <option value="Israel">Israel</option>
+                                        <option value="Italy">Italy</option>
+                                        <option value="Japan">Japan</option>
+                                        <option value="Jordan">Jordan</option>
+                                        <option value="Kuwait">Kuwait</option>
+                                        <option value="Latvia">Latvia</option>
+                                        <option value="Lebanon">Lebanon</option>
+                                        <option value="Lithuania">Lithuania</option>
+                                        <option value="Luxembourg">Luxembourg</option>
+                                        <option value="Malaysia">Malaysia</option>
+                                        <option value="Mexico">Mexico</option>
+                                        <option value="Morocco">Morocco</option>
+
+                                        <option value="Netherlands">Netherlands</option>
+                                        <option value="New Zealand">New Zealand</option>
+                                        <option value="Norway">Norway</option>
+                                        <option value="Oman">Oman</option>
+                                        <option value="Pakistan">Pakistan</option>
+                                        <option value="Peru">Peru</option>
+                                        <option value="Philippines">Philippines</option>
+                                        <option value="Poland">Poland</option>
+                                        <option value="Portugal">Portugal</option>
+                                        <option value="Qatar">Qatar</option>
+                                        <option value="Romania">Romania</option>
+                                        <option value="Saudi Arabia">Saudi Arabia</option>
+                                        <option value="Singapore">Singapore</option>
+                                        <option value="Slovakia">Slovakia</option>
+                                        <option value="Slovenia">Slovenia</option>
+                                        <option value="South Africa">South Africa</option>
+                                        <option value="South Korea">South Korea</option>
+                                        <option value="Spain">Spain</option>
+                                        <option value="Sweden">Sweden</option>
+                                        <option value="Switzerland">Switzerland</option>
+                                        <option value="Taiwan">Taiwan</option>
+                                        <option value="Thailand">Thailand</option>
+                                        <option value="Tunisia">Tunisia</option>
+                                        <option value="Turkey">Turkey</option>
+                                        <option value="United Arab Emirates">United Arab Emirates</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="United States">United States</option>
+                                        <option value="Vietnam">Vietnam</option>
+                                    </optgroup>
                                 </select>
                             </div>
                         </div>
@@ -998,17 +1185,17 @@
                             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
                                 <span style="font-size: 24px;">🅿️</span>
                                 <div>
-                                    <strong style="color: #ffffff; font-size: 13px;">PAIEMENT SÉCURISÉ PAYPAL EXPRESS</strong>
-                                    <div style="font-size: 11px; color: #94a3b8;">Protection des acheteurs PayPal garantie</div>
+                                    <strong style="color: #ffffff; font-size: 13px;">SECURE PAYPAL EXPRESS PAYMENT</strong>
+                                    <div style="font-size: 11px; color: #94a3b8;">Guaranteed PayPal buyer protection</div>
                                 </div>
                             </div>
                             <p style="font-size: 11px; color: #cbd5e1; margin: 0; line-height: 1.4;">
-                                🔒 Après avoir validé vos coordonnées de livraison, vous serez immédiatement redirigé vers le portail officiel <strong>PayPal</strong> pour finaliser votre règlement en toute sécurité.
+                                🔒 After confirming your shipping details, you will be redirected immediately to the official <strong>PayPal</strong> portal to complete your payment securely.
                             </p>
                         </div>
 
                         <button type="submit" class="btn btn-buy btn-buy-lg" style="margin-top: 20px; background: linear-gradient(135deg, #0070ba 0%, #003087 100%);">
-                            💳 VALIDER ET PAYER VIA PAYPAL ($${finalTotal}.00)
+                            💳 CONFIRM AND PAY VIA PAYPAL ($${finalTotal}.00)
                         </button>
                     </form>
                 </div>
@@ -1041,6 +1228,14 @@
             // Calculate total
             const total = product.price * currentOrder.quantity;
 
+            // Deduct stock for ordered product
+            if (productStock[currentOrder.productId] !== undefined) {
+                productStock[currentOrder.productId] = Math.max(0, productStock[currentOrder.productId] - currentOrder.quantity);
+                saveInventory();
+                updateAdminAlertBadge();
+                updateMainShowcaseStockBadges();
+            }
+
             const deliveryDate = new Date();
             deliveryDate.setDate(deliveryDate.getDate() + 2);
 
@@ -1060,31 +1255,31 @@
             receiptBody.innerHTML = `
                 <div class="receipt-card">
                     <span class="receipt-icon">🅿️</span>
-                    <h2 class="section-main-title" style="margin-bottom: 5px;">REDIRECTION VERS PAYPAL...</h2>
-                    <p class="section-desc">Merci <strong>${name}</strong> ! Vos informations de livraison sont enregistrées. Vous allez être redirigé vers la passerelle sécurisée PayPal pour effectuer le paiement de <strong>$${total}.00</strong>.</p>
+                    <h2 class="section-main-title" style="margin-bottom: 5px;">REDIRECTING TO PAYPAL...</h2>
+                    <p class="section-desc">Thank you <strong>${name}</strong>! Your shipping information has been saved. You will be redirected to the secure PayPal gateway to complete the payment of <strong>$${total}.00</strong>.</p>
 
                     <div class="receipt-code-box">
-                        <div class="receipt-code-label">RÉFÉRENCE COMMANDE VELOX</div>
+                        <div class="receipt-code-label">VELOX ORDER REFERENCE</div>
                         <div class="receipt-code-val">${orderNum}</div>
                     </div>
 
                     <table class="receipt-details-table">
-                        <tr><td>Produit sélectionné :</td><td><strong>${product.title} (${product.quality})</strong></td></tr>
-                        <tr><td>Quantité :</td><td>${currentOrder.quantity} Flacon(s) (30ml)</td></tr>
-                        <tr><td>Montant total :</td><td><strong style="color: #38bdf8; font-size: 15px;">$${total}.00</strong></td></tr>
-                        <tr><td>Adresse de livraison :</td><td>${address}, ${zip} ${city}, ${country}</td></tr>
-                        <tr><td>Email de contact :</td><td>${email}</td></tr>
+                        <tr><td>Selected Product:</td><td><strong>${product.title} (${product.quality})</strong></td></tr>
+                        <tr><td>Quantity:</td><td>${currentOrder.quantity} Bottle(s) (30ml)</td></tr>
+                        <tr><td>Total Amount:</td><td><strong style="color: #38bdf8; font-size: 15px;">$${total}.00</strong></td></tr>
+                        <tr><td>Shipping Address:</td><td>${address}, ${zip} ${city}, ${country}</td></tr>
+                        <tr><td>Contact Email:</td><td>${email}</td></tr>
                     </table>
 
                     <div style="background: rgba(0, 112, 186, 0.15); border: 1px solid #0070ba; border-radius: 8px; padding: 14px; max-width: 500px; margin: 15px auto; font-size: 12px; color: #ffffff;">
-                        🔒 Si la redirection automatique vers PayPal ne se lance pas dans 3 secondes, cliquez sur le bouton ci-dessous :
+                        🔒 If automatic redirection to PayPal does not start in 3 seconds, click the button below:
                     </div>
 
                     <div class="receipt-actions" style="flex-direction: column; align-items: center; gap: 10px;">
                         <a href="${paypalUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-buy btn-buy-lg" style="background: linear-gradient(135deg, #0070ba 0%, #003087 100%); width: 100%; max-width: 400px; text-decoration: none; text-align: center;">
-                            👉 CLIQUER ICI POUR PAYER SUR PAYPAL ($${total}.00)
+                            👉 CLICK HERE TO PAY ON PAYPAL ($${total}.00)
                         </a>
-                        <button class="btn btn-modal-secondary" onclick="closeReceiptModal()" style="margin-top: 5px;">FERMER LA FENÊTRE</button>
+                        <button class="btn btn-modal-secondary" onclick="closeReceiptModal()" style="margin-top: 5px;">CLOSE WINDOW</button>
                     </div>
                 </div>
             `;
@@ -1130,9 +1325,560 @@
             }
         }
 
+        // --- System Stock & Inventory Management ---
+        const CRITICAL_STOCK_THRESHOLD = 5;
+
+        // Default initial stock values
+        const defaultInventoryStock = {
+            product1: 3,  // Graphene Ceramic 10H - CRITICAL (< 5)
+            product2: 12, // Graphene Ultra 10H - Normal
+            product3: 2   // Diamond Shield 12H - CRITICAL (< 5)
+        };
+
+        let productStock = {};
+
+        function initInventory() {
+            try {
+                const saved = localStorage.getItem('velox_inventory_stock');
+                if (saved) {
+                    productStock = JSON.parse(saved);
+                } else {
+                    productStock = { ...defaultInventoryStock };
+                    saveInventory();
+                }
+            } catch (e) {
+                productStock = { ...defaultInventoryStock };
+            }
+            updateAdminAlertBadge();
+            updateMainShowcaseStockBadges();
+        }
+
+        function saveInventory() {
+            try {
+                localStorage.setItem('velox_inventory_stock', JSON.stringify(productStock));
+            } catch (e) {
+                console.warn('LocalStorage save inventory error:', e);
+            }
+        }
+
+        function getCriticalProducts() {
+            return Object.keys(productsData).filter(id => {
+                const qty = productStock[id] !== undefined ? productStock[id] : 0;
+                return qty < CRITICAL_STOCK_THRESHOLD;
+            });
+        }
+
+        function updateAdminAlertBadge() {
+            const criticalList = getCriticalProducts();
+            const navBadge = document.getElementById('adminAlertBadgeNav');
+            const footerBadge = document.getElementById('adminAlertBadgeFooter');
+
+            if (navBadge) {
+                if (criticalList.length > 0) {
+                    navBadge.style.display = 'inline-block';
+                    navBadge.innerHTML = `⚠️ ${criticalList.length}`;
+                    navBadge.title = `${criticalList.length} products reached critical stock level (< 5 items)`;
+                } else {
+                    navBadge.style.display = 'none';
+                }
+            }
+
+            if (footerBadge) {
+                if (criticalList.length > 0) {
+                    footerBadge.style.display = 'inline-block';
+                    footerBadge.innerHTML = `⚠️ ${criticalList.length} Critical`;
+                } else {
+                    footerBadge.style.display = 'none';
+                }
+            }
+        }
+
+        function updateMainShowcaseStockBadges() {
+            Object.keys(productsData).forEach(id => {
+                const stockElem = document.getElementById('stockBadge_' + id);
+                if (stockElem) {
+                    const qty = productStock[id] !== undefined ? productStock[id] : 0;
+                    if (qty === 0) {
+                        stockElem.className = 'stock-pill stock-pill-out';
+                        stockElem.innerHTML = '🚨 OUT OF STOCK (0)';
+                    } else if (qty < CRITICAL_STOCK_THRESHOLD) {
+                        stockElem.className = 'stock-pill stock-pill-critical';
+                        stockElem.innerHTML = `⚠️ Low Stock: ${qty} remaining`;
+                    } else {
+                        stockElem.className = 'stock-pill stock-pill-ok';
+                        stockElem.innerHTML = `✅ In Stock: ${qty} units`;
+                    }
+                }
+            });
+        }
+
+        function openAdminModal(e) {
+            if (e) e.preventDefault();
+            const isAuthenticated = sessionStorage.getItem('velox_admin_auth') === 'true';
+            if (isAuthenticated) {
+                renderAdminModal();
+            } else {
+                renderAdminLoginModal();
+            }
+            const modal = document.getElementById('adminModal');
+            if (modal) {
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function renderAdminLoginModal() {
+            const adminModalBody = document.getElementById('adminModalBody');
+            if (!adminModalBody) return;
+
+            adminModalBody.innerHTML = `
+                <div style="text-align: center; padding: 30px 15px;">
+                    <div style="font-size: 48px; margin-bottom: 12px; filter: drop-shadow(0 0 10px rgba(0,162,255,0.5));">🔐</div>
+                    <div style="font-family: 'Orbitron', sans-serif; font-size: 11px; color: #00a2ff; letter-spacing: 2px; text-transform: uppercase;">ADMINISTRATOR RESTRICTED ACCESS</div>
+                    <h2 class="modal-title" style="font-size: 20px; color: #ffffff; margin-top: 6px;">
+                        Admin Panel Login
+                    </h2>
+                    <p style="font-size: 13px; color: #94a3b8; margin: 8px auto 0 auto; max-width: 420px; line-height: 1.5;">
+                        This protected portal is reserved for VELOX system administrators only. Please enter your password to access warehouse and critical stock management.
+                    </p>
+
+                    <form onsubmit="handleAdminLoginSubmit(event)" style="margin-top: 25px; max-width: 320px; margin-left: auto; margin-right: auto;">
+                        <div style="margin-bottom: 15px;">
+                            <input type="password" id="adminPasswordInput" placeholder="Password" required 
+                                   style="width: 100%; padding: 12px 16px; background: rgba(0, 0, 0, 0.7); border: 1px solid rgba(0, 162, 255, 0.4); border-radius: 8px; color: #ffffff; font-size: 14px; text-align: center; outline: none;" autofocus />
+                        </div>
+                        <div id="adminLoginError" style="color: #f87171; font-size: 12px; margin-bottom: 15px; display: none; font-weight: bold;"></div>
+                        <button type="submit" class="btn btn-buy" style="width: 100%; padding: 12px; font-weight: bold; font-size: 14px; border-radius: 8px;">
+                            🔑 Admin Login
+                        </button>
+                    </form>
+                </div>
+            `;
+            setTimeout(() => {
+                const input = document.getElementById('adminPasswordInput');
+                if (input) input.focus();
+            }, 100);
+        }
+
+        function handleAdminLoginSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('adminPasswordInput');
+            const errDiv = document.getElementById('adminLoginError');
+            if (!input) return;
+
+            const pass = input.value.trim();
+            if (pass === 'admin' || pass === 'velox' || pass === 'velox123' || pass === '123456') {
+                sessionStorage.setItem('velox_admin_auth', 'true');
+                renderAdminModal();
+                showAdminToast('Successfully logged in as admin.');
+            } else {
+                if (errDiv) {
+                    errDiv.style.display = 'block';
+                    errDiv.innerHTML = '❌ Incorrect password! Please try again.';
+                }
+            }
+        }
+
+        function logoutAdmin() {
+            sessionStorage.removeItem('velox_admin_auth');
+            closeAdminModal();
+            showAdminToast('Logged out of admin panel.');
+        }
+
+        function closeAdminModal() {
+            const modal = document.getElementById('adminModal');
+            if (modal) {
+                modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function handleAdminOverlayClick(e) {
+            if (e.target.classList.contains('modal-overlay')) {
+                closeAdminModal();
+            }
+        }
+
+        function showAdminToast(msg) {
+            let toast = document.getElementById('adminToast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'adminToast';
+                toast.className = 'admin-toast';
+                document.body.appendChild(toast);
+            }
+            toast.innerHTML = `<span>📦</span> <span>${msg}</span>`;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3500);
+        }
+
+        function restockProduct(productId, amount) {
+            const current = productStock[productId] !== undefined ? productStock[productId] : 0;
+            productStock[productId] = current + amount;
+            saveInventory();
+            updateAdminAlertBadge();
+            updateMainShowcaseStockBadges();
+            renderAdminModal();
+            const pTitle = productsData[productId] ? productsData[productId].title : productId;
+            showAdminToast(`Restocked <strong>${pTitle}</strong> (+${amount} units) successfully!`);
+        }
+
+        function restockAllCritical() {
+            const criticalList = getCriticalProducts();
+            if (criticalList.length === 0) {
+                showAdminToast('All products currently have sufficient stock.');
+                return;
+            }
+            criticalList.forEach(id => {
+                productStock[id] = (productStock[id] || 0) + 10;
+            });
+            saveInventory();
+            updateAdminAlertBadge();
+            updateMainShowcaseStockBadges();
+            renderAdminModal();
+            showAdminToast(`Restocked all critical products (+10 units each)!`);
+        }
+
+        function setStockDirect(productId, val) {
+            const newQty = Math.max(0, parseInt(val) || 0);
+            productStock[productId] = newQty;
+            saveInventory();
+            updateAdminAlertBadge();
+            updateMainShowcaseStockBadges();
+            renderAdminModal();
+            showAdminToast(`Stock quantity updated to ${newQty} units.`);
+        }
+
+        function changeStockBy(productId, delta) {
+            const current = productStock[productId] !== undefined ? productStock[productId] : 0;
+            const newQty = Math.max(0, current + delta);
+            productStock[productId] = newQty;
+            saveInventory();
+            updateAdminAlertBadge();
+            updateMainShowcaseStockBadges();
+            renderAdminModal();
+        }
+
+        function renderAdminModal() {
+            const adminModalBody = document.getElementById('adminModalBody');
+            if (!adminModalBody) return;
+
+            const criticalList = getCriticalProducts();
+            const totalProducts = Object.keys(productsData).length;
+
+            let criticalBannerHtml = '';
+            if (criticalList.length > 0) {
+                let criticalCardsHtml = criticalList.map(id => {
+                    const prod = productsData[id];
+                    const qty = productStock[id] !== undefined ? productStock[id] : 0;
+                    return `
+                        <div class="critical-item-card">
+                            <div class="critical-item-info">
+                                <img src="${prod.image}" class="critical-item-img" alt="${prod.title}" onerror="this.style.display='none'">
+                                <div>
+                                    <div class="critical-item-name">${prod.title}</div>
+                                    <div class="critical-item-qty">⚠️ Remaining: ${qty} units only</div>
+                                </div>
+                            </div>
+                            <button class="btn-restock-sm" onclick="restockProduct('${id}', 10)">
+                                ⚡ +10 Restock
+                            </button>
+                        </div>
+                    `;
+                }).join('');
+
+                criticalBannerHtml = `
+                    <div class="critical-alert-banner">
+                        <div class="critical-alert-header">
+                            <div class="critical-alert-icon">⚠️</div>
+                            <div>
+                                <h3 class="critical-alert-title">Critical Stock Alert (< 5 units)</h3>
+                                <p class="critical-alert-sub">
+                                    There are <strong>${criticalList.length} product(s)</strong> with critical stock levels (under 5 units). Please request fresh inventory or use the quick restock button!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="critical-items-grid">
+                            ${criticalCardsHtml}
+                        </div>
+
+                        <button class="btn-restock-all" onclick="restockAllCritical()">
+                            🔄 Restock All Critical Products Instantly (+10 units each)
+                        </button>
+                    </div>
+                `;
+            } else {
+                criticalBannerHtml = `
+                    <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 12px; padding: 16px; margin-bottom: 25px; display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 26px;">✅</span>
+                        <div>
+                            <strong style="color: #34d399; font-size: 14px;">Inventory in Excellent Status</strong>
+                            <div style="font-size: 12px; color: #cbd5e1; margin-top: 2px;">All products currently have more than 5 units available in stock.</div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Full inventory list
+            let inventoryRowsHtml = Object.keys(productsData).map(id => {
+                const prod = productsData[id];
+                const qty = productStock[id] !== undefined ? productStock[id] : 0;
+                const isCritical = qty < CRITICAL_STOCK_THRESHOLD;
+                const isOut = qty === 0;
+
+                let statusPill = '';
+                if (isOut) {
+                    statusPill = `<span class="stock-pill stock-pill-out">🚨 OUT OF STOCK (0)</span>`;
+                } else if (isCritical) {
+                    statusPill = `<span class="stock-pill stock-pill-critical">⚠️ Low Stock (${qty})</span>`;
+                } else {
+                    statusPill = `<span class="stock-pill stock-pill-ok">✅ In Stock (${qty})</span>`;
+                }
+
+                return `
+                    <div class="inventory-row ${isCritical ? 'is-critical' : ''}">
+                        <div class="inv-prod-details">
+                            <img src="${prod.image}" class="inv-prod-img" alt="${prod.title}" onerror="this.style.display='none'">
+                            <div>
+                                <div class="inv-prod-title">${prod.title}</div>
+                                <div class="inv-prod-meta">${prod.quality} • Price: $${prod.price}.00 • ID: ${id}</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            ${statusPill}
+                        </div>
+
+                        <div class="inv-stock-ctrl">
+                            <button type="button" class="inv-qty-btn" onclick="changeStockBy('${id}', -1)" title="Decrease quantity">-</button>
+                            <input type="number" class="inv-qty-input" value="${qty}" min="0" onchange="setStockDirect('${id}', this.value)" title="Set quantity">
+                            <button type="button" class="inv-qty-btn" onclick="changeStockBy('${id}', 1)" title="Increase quantity">+</button>
+                            
+                            <div class="inv-quick-add">
+                                <button type="button" class="btn-add-pill" onclick="restockProduct('${id}', 5)">+5</button>
+                                <button type="button" class="btn-add-pill" onclick="restockProduct('${id}', 10)">+10</button>
+                                <button type="button" class="btn-add-pill" onclick="restockProduct('${id}', 25)">+25</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Recent orders
+            let recentOrders = [];
+            try {
+                const savedOrder = localStorage.getItem('velox_last_order');
+                if (savedOrder) {
+                    recentOrders.push(JSON.parse(savedOrder));
+                }
+            } catch(e) {}
+
+            let recentOrdersHtml = '';
+            if (recentOrders.length > 0) {
+                recentOrdersHtml = recentOrders.map(ord => `
+                    <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 14px; font-size: 12px; margin-top: 8px;">
+                        <div style="display: flex; justify-content: space-between; color: #38bdf8; font-weight: bold;">
+                            <span>📦 ${ord.orderNum || 'VELOX-ORDER'}</span>
+                            <span>$${ord.total || 0}.00</span>
+                        </div>
+                        <div style="color: #cbd5e1; margin-top: 4px;">Customer: ${ord.name || 'Client'} (${ord.email || ''}) - ${ord.product || ''}</div>
+                        <div style="color: #64748b; font-size: 10px; margin-top: 2px;">Date: ${new Date(ord.date).toLocaleString()}</div>
+                    </div>
+                `).join('');
+            } else {
+                recentOrdersHtml = `<div style="font-size: 12px; color: #64748b;">No recent completed orders logged yet.</div>`;
+            }
+
+            let logoUploadCardHtml = `
+                <div class="logo-upload-card" style="background: rgba(0,0,0,0.4); border: 1px dashed rgba(56, 189, 248, 0.4); border-radius: 12px; padding: 18px; margin-bottom: 25px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                        <h4 style="font-size: 14px; color: #38bdf8; margin: 0; display: flex; align-items: center; gap: 8px;">
+                            📤 Upload & Update Logo (EPS Upload)
+                        </h4>
+                        <span style="font-size: 11px; color: #94a3b8;">Allowed formats: .EPS, .SVG, .PNG, .JPG</span>
+                    </div>
+                    
+                    <div id="logoDropZone" onclick="document.getElementById('logoFileInput').click()" style="cursor: pointer; border: 2px dashed rgba(0, 162, 255, 0.35); border-radius: 8px; padding: 20px; text-align: center; background: rgba(15, 23, 42, 0.6); transition: all 0.2s;" onmouseover="this.style.borderColor='#38bdf8'" onmouseout="this.style.borderColor='rgba(0, 162, 255, 0.35)'">
+                        <div style="font-size: 32px; margin-bottom: 8px;">📁</div>
+                        <div style="font-size: 13px; color: #f1f5f9; font-weight: bold;">Click here to upload a logo file (EPS, SVG, PNG) or drag & drop it here</div>
+                        <div style="font-size: 11px; color: #64748b; margin-top: 4px;">The logo will be updated and applied across the interface immediately</div>
+                        <input type="file" id="logoFileInput" accept=".eps,.svg,.png,.jpg,.jpeg,.webp" style="display: none;" onchange="handleLogoFileSelect(event)" />
+                    </div>
+
+                    <div id="logoUploadProgress" style="display: none; margin-top: 12px; font-size: 12px; color: #38bdf8; text-align: center; font-weight: bold;">
+                        ⏳ Uploading and processing logo file...
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px;">
+                        <div id="currentLogoPreview" style="display: flex; align-items: center; gap: 10px;">
+                            <span style="font-size: 12px; color: #cbd5e1;">Current Preview:</span>
+                            <img id="adminCurrentLogoImg" src="images/logo.png" style="height: 38px; max-width: 140px; object-fit: contain; background: rgba(0,0,0,0.6); padding: 4px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.12);" />
+                        </div>
+                        <button type="button" class="btn-add-pill" onclick="resetDefaultLogo()" style="font-size: 11px; padding: 6px 12px; color: #cbd5e1;" title="Reset default logo">
+                            🔄 Restore Default Logo
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            adminModalBody.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <div>
+                        <div style="font-family: 'Orbitron', sans-serif; font-size: 11px; color: #00a2ff; letter-spacing: 1.5px; text-transform: uppercase;">VELOX CONTROL CENTER</div>
+                        <h2 class="modal-title" style="margin-top: 4px; display: flex; align-items: center; gap: 10px; font-size: 20px;">
+                            ⚙️ Admin Dashboard & Inventory Management
+                        </h2>
+                    </div>
+                    <button type="button" class="btn-add-pill" onclick="logoutAdmin()" style="background: rgba(239, 68, 68, 0.2); border-color: #ef4444; color: #fca5a5; padding: 6px 12px; font-weight: bold;" title="Secure Logout">
+                        🚪 Logout
+                    </button>
+                </div>
+
+                ${logoUploadCardHtml}
+
+                ${criticalBannerHtml}
+
+                <div class="admin-section-header">
+                    <h3 class="admin-section-title">
+                        📦 Product Inventory List (${totalProducts} products)
+                    </h3>
+                    <span style="font-size: 12px; color: #94a3b8;">Critical stock threshold: <strong>under 5 units</strong></span>
+                </div>
+
+                <div class="inventory-grid">
+                    ${inventoryRowsHtml}
+                </div>
+
+                <div class="admin-section-header" style="margin-top: 25px;">
+                    <h3 class="admin-section-title">
+                        🧾 Recent Completed Orders Log
+                    </h3>
+                    <button type="button" class="btn-add-pill" onclick="localStorage.removeItem('velox_last_order'); renderAdminModal();" style="font-size: 10px;">Clear Log</button>
+                </div>
+
+                <div>
+                    ${recentOrdersHtml}
+                </div>
+            `;
+
+            // Trigger preview update
+            setTimeout(() => {
+                applyCustomLogoToPage();
+            }, 50);
+        }
+
+        // --- Logo Upload Handlers ---
+        function handleLogoFileSelect(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const progress = document.getElementById('logoUploadProgress');
+            if (progress) {
+                progress.style.display = 'block';
+                progress.innerHTML = '⏳ Uploading and processing logo file (' + file.name + ')...';
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const base64Data = event.target.result;
+                
+                fetch('/api/upload-logo', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        fileName: file.name,
+                        fileData: base64Data
+                    })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (progress) progress.style.display = 'none';
+                    if (data.success && data.logoUrl) {
+                        localStorage.setItem('velox_custom_logo', data.logoUrl);
+                        applyCustomLogoToPage(data.logoUrl);
+                        showAdminToast('Logo uploaded and updated in ' + file.name.split('.').pop().toUpperCase() + ' format successfully!');
+                        renderAdminModal();
+                    } else {
+                        showAdminToast('An error occurred while saving logo: ' + (data.error || 'Unknown error'));
+                    }
+                })
+                .catch(err => {
+                    if (progress) progress.style.display = 'none';
+                    console.error('Upload error:', err);
+                    if (file.type.startsWith('image/') || file.name.endsWith('.svg')) {
+                        localStorage.setItem('velox_custom_logo', base64Data);
+                        applyCustomLogoToPage(base64Data);
+                        showAdminToast('New logo saved and applied successfully!');
+                        renderAdminModal();
+                    } else {
+                        showAdminToast('Could not connect to server to upload EPS file.');
+                    }
+                });
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function applyCustomLogoToPage(url) {
+            const logoVersion = Date.now();
+            const customUrl = url || localStorage.getItem('velox_custom_logo') || `images/logo.png?v=${logoVersion}`;
+
+            const navImgs = document.querySelectorAll('.brand-logo-img');
+            const footerImgs = document.querySelectorAll('.footer-logo-img');
+
+            navImgs.forEach(img => {
+                img.src = customUrl;
+                img.style.display = 'inline-block';
+            });
+            footerImgs.forEach(img => {
+                img.src = customUrl;
+                img.style.display = 'inline-block';
+            });
+
+            const adminImg = document.getElementById('adminCurrentLogoImg');
+            if (adminImg) adminImg.src = customUrl;
+        }
+
+        function resetDefaultLogo() {
+            localStorage.removeItem('velox_custom_logo');
+            const defaultUrl = `images/logo.png?v=${Date.now()}`;
+            
+            const navImgs = document.querySelectorAll('.brand-logo-img');
+            const footerImgs = document.querySelectorAll('.footer-logo-img');
+
+            navImgs.forEach(img => {
+                img.src = defaultUrl;
+                img.style.display = 'inline-block';
+            });
+            footerImgs.forEach(img => {
+                img.src = defaultUrl;
+                img.style.display = 'inline-block';
+            });
+
+            showAdminToast('Default logo restored (logo.png).');
+            renderAdminModal();
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            initInventory();
+            localStorage.removeItem('velox_custom_logo');
+            applyCustomLogoToPage();
+
             document.querySelectorAll('img').forEach(img => {
                 img.addEventListener('error', () => {
+                    if (img.classList.contains('brand-logo-img') || img.classList.contains('footer-logo-img')) {
+                        if (!img.dataset.triedSvg) {
+                            img.dataset.triedSvg = 'true';
+                            img.src = 'images/logo.svg';
+                            return;
+                        }
+                    }
                     if (!img.dataset.fallback) {
                         img.dataset.fallback = 'true';
                         const title = img.alt || 'VELOX Coating';
@@ -1145,4 +1891,3 @@
 
 </body>
 </html>
-                                         
